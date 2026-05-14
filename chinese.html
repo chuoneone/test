@@ -1,0 +1,1071 @@
+<html lang="zh-TW"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg4NWQ3NDljYzY2NDljMDMxOWY1YmJlYWYwMWU4ZmVjZDIyZjk1YzQiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxMTk5MDY1NjUxNDA2ODcxODEzNSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjX2FhMmM3NmIyYzVjY2M0YzRfaW5kZXguaHRtbC03NzUifSwiZXhwIjoxNzc4NjQ4OTE3LCJpYXQiOjE3Nzg2NDUzMTcsImFsZyI6IlJTMjU2In0.WNUTahxtOV04k5DqeHJjcX-mxHoAOSUAwektPJh6pYW52shW7RZDRNALCCxtP2VB217ffAJcN92NI3JDaxxesO5_oclpBxf2zEEYJM9znJLqb7Q85nBnwBfZLyxj2OU8SyTe0_uDbhlYhCmDfpNUz635-UUuqiEQJMIh40tHJj4qwUFiIJiwmWB2zVmYpNDsKpAgmyKA5K0eqzoGfF9J9KjS8TCO805cYQLyoEI5Xyt86HWrWzUBxdPSRtJzQLgUY089QeRrhJcFKzzcf2SvipTqQ7wklgf6t4Qcy9qyOjBxAeCCbD2bzf9kmVUzDkRCPe8WeDEH0iRdLDfVZJLFIA","c_aa2c76b2c5ccc4c4_index.html-775")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){var c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){var b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){let [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;var c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){var d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function ua(a,b){return t(function*(){var d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){var d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield wa(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;let c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){var b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壽豐國中八年級國文段考</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&amp;display=swap" rel="stylesheet">
+    <style>
+        /* --- 內嵌樣式以確保離線可用 --- */
+        :root {
+            /* New teal/blue-green palette */
+            --primary-100: #e0f2f1; --primary-500: #4db6ac; --primary-600: #26a69a;
+            --secondary-500: #80cbc4; --secondary-600: #4db6ac;
+            --background: #f5f7f8;
+            --surface: #ffffff;
+            --highlight-bg: #fffde7;
+            --highlight-underline: #26a69a;
+            --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-300: #cbd5e1; --gray-400: #94a3b8;
+            --gray-500: #64748b; --gray-600: #475569; --gray-700: #37474f; --gray-800: #263238; --gray-900: #1c2529;
+            --white: #ffffff;
+        }
+        body {
+            font-family: "LXGW WenKai TC", cursive;
+            background-color: var(--background);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+            margin: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+        #app-container {
+            background-color: var(--white);
+            width: 100%;
+            max-width: 56rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+        }
+        header { text-align: center; margin-bottom: 1.5rem; }
+        h1 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; color: var(--primary-600); margin-top: 0.25rem; }
+        .controls-container { margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 2rem; row-gap: 1rem; }
+        .control-group { display: flex; align-items: center; }
+        .control-label { font-size: 1.125rem; font-weight: 600; color: var(--gray-700); margin-right: 0.75rem; flex-shrink: 0; }
+        select {
+            -webkit-appearance: none; appearance: none;
+            font-size: 1.125rem; font-weight: 600; background-color: var(--gray-50); border: 1px solid var(--gray-300);
+            color: var(--gray-900); border-radius: 0.5rem; display: block; width: auto; padding: 0.625rem 2.5rem 0.625rem 0.75rem; cursor: pointer;
+            max-width: 200px;
+        }
+        select:focus { outline: 2px solid var(--primary-500); border-color: var(--primary-500); }
+        .select-wrapper { position: relative; }
+        .select-arrow { pointer-events: none; position: absolute; top: 0; bottom: 0; right: 0; display: flex; align-items: center; padding: 0 0.75rem; color: var(--gray-500); }
+        #speed-control { width: 8rem; height: 0.5rem; background-color: var(--gray-200); border-radius: 0.5rem; -webkit-appearance: none; appearance: none; cursor: pointer; }
+        #speed-control:active::-webkit-slider-thumb {
+            box-shadow: 0 0 0 8px rgba(0, 172, 193, 0.2);
+        }
+        #speed-value { margin-left: 0.75rem; font-size: 1.125rem; font-weight: 600; color: var(--gray-700); width: 3rem; text-align: left; }
+        #quiz-area { background-color: var(--surface); border: 1px solid var(--gray-200); border-radius: 0.75rem; padding: 1.5rem; min-height: 300px; }
+        #preamble-text p { line-height: 1.8; margin-bottom: 1em;}
+        .question-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; margin-top: 1.5rem;}
+        #question-text { font-size: 1.125rem; font-weight: 700; color: var(--gray-800); flex-grow: 1; white-space: pre-wrap; border-radius: 0.25rem; padding: 0.25rem; }
+        #question-text span { cursor: pointer; transition: background-color 0.2s ease; }
+        #question-text span:hover { background-color: var(--yellow-100); }
+
+        button { font-weight: 700; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); transition: all 0.2s ease-in-out; border: none;}
+        button:hover { transform: scale(1.05); }
+        button:disabled { background-color: var(--gray-300); cursor: not-allowed; transform: none; box-shadow: none; }
+        #replay-btn { background-color: var(--primary-500); color: white; padding: 0.625rem 1rem; display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+        #replay-btn:hover { background-color: var(--primary-600); }
+        #options-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+        .option-item {
+            font-size: 1rem; border: 1px solid var(--gray-300); padding: 1rem; border-radius: 0.5rem;
+            background-color: var(--white); box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+        }
+
+        /* --- Interactive Styles --- */
+        .option-item, #preamble-text span, #question-text span.non-option {
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .option-item:hover, #preamble-text span:hover, #question-text span.non-option:hover {
+            background-color: var(--highlight-bg);
+        }
+        .speaking, .speaking:hover { /* Ensure speaking style overrides hover */
+            text-decoration: underline;
+            text-decoration-color: var(--highlight-underline);
+            text-decoration-thickness: 3px;
+            background-color: var(--highlight-bg);
+        }
+
+        nav { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+        nav button { background-color: var(--primary-500); color: white; padding: 0.75rem 2rem; }
+        nav button:hover { background-color: var(--primary-600); }
+        footer { text-align: center; margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+        #download-btn { background-color: var(--gray-600); color: white; padding: 0.5rem 1.5rem; }
+        #download-btn:hover { background-color: var(--gray-700); }
+        .footer-text { font-size: 0.875rem; color: var(--gray-400); }
+
+        @media (min-width: 768px) {
+            #app-container { padding: 2.5rem; }
+            h1 { font-size: 1.875rem; line-height: 2.25rem; }
+            #question-text { font-size: 1.25rem; }
+            .option-item { font-size: 1.125rem; }
+        }
+        @media (max-width: 420px) {
+            body { padding: 0.5rem; }
+            #app-container { padding: 1rem; }
+            h1 { font-size: 1.25rem; word-break: break-word; }
+            header p { font-size: 1.125rem; }
+            .option-item { padding: 0.75rem; font-size: 1rem; }
+            nav { flex-direction: column; gap: 0.75rem; }
+            nav button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>花蓮縣立壽豐國民中學 114學年度第二學期第二次段考八年級國文科試題</h1>
+            <p class="text-gray-500 mt-2 text-xl"></p>
+        </header>
+
+        <div class="controls-container">
+            <div class="control-group">
+                <label for="question-select" class="control-label">選擇題號:</label>
+                <div class="select-wrapper">
+                    <select id="question-select"><optgroup label="非選擇題-國字注音"><option value="0">非選擇題-國字注音 第 1 題</option><option value="1">非選擇題-國字注音 第 2 題</option><option value="2">非選擇題-國字注音 第 3 題</option><option value="3">非選擇題-國字注音 第 4 題</option><option value="4">非選擇題-國字注音 第 5 題</option><option value="5">非選擇題-國字注音 第 6 題</option><option value="6">非選擇題-國字注音 第 7 題</option><option value="7">非選擇題-國字注音 第 8 題</option><option value="8">非選擇題-國字注音 第 9 題</option><option value="9">非選擇題-國字注音 第 10 題</option><option value="10">非選擇題-國字注音 第 11 題</option><option value="11">非選擇題-國字注音 第 12 題</option></optgroup><optgroup label="非選擇題-注釋"><option value="12">非選擇題-注釋 第 1 題</option><option value="13">非選擇題-注釋 第 2 題</option><option value="14">非選擇題-注釋 第 3 題</option><option value="15">非選擇題-注釋 第 4 題</option><option value="16">非選擇題-注釋 第 5 題</option><option value="17">非選擇題-注釋 第 6 題</option></optgroup><optgroup label="非選擇題-翻譯填空"><option value="18">非選擇題-翻譯填空 第 1 題</option><option value="19">非選擇題-翻譯填空 第 2 題</option><option value="20">非選擇題-翻譯填空 第 3 題</option><option value="21">非選擇題-翻譯填空 第 4 題</option><option value="22">非選擇題-翻譯填空 第 5 題</option></optgroup><optgroup label="非選擇題-加分題"><option value="23">非選擇題-加分題 第 1 題</option><option value="24">非選擇題-加分題 第 2 題</option><option value="25">非選擇題-加分題 第 3 題</option></optgroup><optgroup label="綜合測驗"><option value="26">綜合測驗 第 1 題</option><option value="27">綜合測驗 第 2 題</option><option value="28">綜合測驗 第 3 題</option><option value="29">綜合測驗 第 4 題</option><option value="30">綜合測驗 第 5 題</option><option value="31">綜合測驗 第 6 題</option><option value="32">綜合測驗 第 7 題</option><option value="33">綜合測驗 第 8 題</option><option value="34">綜合測驗 第 9 題</option><option value="35">綜合測驗 第 10 題</option><option value="36">綜合測驗 第 11 題</option><option value="37">綜合測驗 第 12 題</option><option value="38">綜合測驗 第 13 題</option><option value="39">綜合測驗 第 14 題</option><option value="40">綜合測驗 第 15 題</option><option value="41">綜合測驗 第 16 題</option><option value="42">綜合測驗 第 17 題</option><option value="43">綜合測驗 第 18 題</option><option value="44">綜合測驗 第 19 題</option><option value="45">綜合測驗 第 20 題</option><option value="46">綜合測驗 第 21 題</option><option value="47">綜合測驗 第 22 題</option><option value="48">綜合測驗 第 23 題</option><option value="49">綜合測驗 第 24 題</option><option value="50">綜合測驗 第 25 題</option><option value="51">綜合測驗 第 26 題</option><option value="52">綜合測驗 第 27 題</option><option value="53">綜合測驗 第 28 題</option><option value="54">綜合測驗 第 29 題</option><option value="55">綜合測驗 第 30 題</option></optgroup></select>
+                    <div class="select-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708 .708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="voice-select" class="control-label">選擇聲音:</label>
+                <div class="select-wrapper">
+                    <select id="voice-select"><option value="0">Microsoft Hanhan - Chinese (Traditional, Taiwan)</option><option value="1">Microsoft Yating - Chinese (Traditional, Taiwan)</option><option value="2">Microsoft Zhiwei - Chinese (Traditional, Taiwan)</option><option value="3">Google&nbsp;普通话（中国大陆）</option><option value="4">Google&nbsp;粤語（香港）</option><option value="5">Google 國語（臺灣）</option></select>
+                    <div class="select-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708 .708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="speed-control" class="control-label">念讀速度:</label>
+                <input id="speed-control" type="range" min="0.5" max="1.5" step="0.1" value="0.9">
+                <span id="speed-value">0.9x</span>
+            </div>
+            <button id="replay-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+                </svg>
+                唸題目
+            </button>
+        </div>
+
+        <nav>
+            <button id="prev-btn">上一題</button>
+            <button id="next-btn">下一題</button>
+        </nav>
+
+        <main id="quiz-area">
+            <div id="preamble-text" class="text-base md:text-lg text-gray-700 font-medium" style="display: block;"><p><span>(A) 賀 曾西愛醫師開業誌慶 (功著杏壇) 仁心中學校長莊士岷敬賀</span></p><p><span>(B) 許開議員當選誌慶 (坐擁百城) 平心出版社全體同仁敬贈</span></p><p><span class="speaking">(C) 王愛嬌老師惠存 (廣栽桃李) 臺中市議會議長陳清波敬賀</span></p><p><span>(D) 惠識書局開業三十週年誌慶 (功在桑梓) 文教里里長李斯文敬賀</span></p></div>
+            <div class="question-header">
+                <div id="question-text"><span>22.下列四個題辭,</span><span>何者內容正確?</span></div>
+            </div>
+            <ul id="options-list"><li class="option-item">(A)</li><li class="option-item">(B)</li><li class="option-item">(C)</li><li class="option-item">(D)</li></ul>
+        </main>
+        
+        <footer>
+            <button id="download-btn">下載HTML (離線版可用)</button>
+            <p class="footer-text">© 2025 特教米克師｜採用CC BY-NC-SA 4.0 創用CC授權非商業用途歡迎轉載或改編，請保留署名並附上原始連結。</p>
+        </footer>
+    </div>
+
+    <script>
+        const questions = [
+            { section: "非選擇題-國字注音", displayId: "1", preamble: null, question: "01.「ㄓㄡˋ」紋", options: null },
+            { section: "非選擇題-國字注音", displayId: "2", preamble: null, question: "02.「ㄋㄨㄛˊ」移", options: null },
+            { section: "非選擇題-國字注音", displayId: "3", preamble: null, question: "03.「 」頭", options: null },
+            { section: "非選擇題-國字注音", displayId: "4", preamble: null, question: "04.金「柝」", options: null },
+            { section: "非選擇題-國字注音", displayId: "5", preamble: null, question: "05.鞍「ㄐㄧㄢ」", options: null },
+            { section: "非選擇題-國字注音", displayId: "6", preamble: null, question: "06.下而「飲」", options: null },
+            { section: "非選擇題-國字注音", displayId: "7", preamble: null, question: "07.鶴「ㄔㄤˇ」", options: null },
+            { section: "非選擇題-國字注音", displayId: "8", preamble: null, question: "08.不能遠「ㄉㄨㄣˋ」", options: null },
+            { section: "非選擇題-國字注音", displayId: "9", preamble: null, question: "09. 言「くー!」", options: null },
+            { section: "非選擇題-國字注音", displayId: "10", preamble: null, question: "10.「綸」巾", options: null },
+            { section: "非選擇題-國字注音", displayId: "11", preamble: null, question: "11.「旌旗", options: null },
+            { section: "非選擇題-國字注音", displayId: "12", preamble: null, question: "12.「軼」事", options: null },
+            { section: "非選擇題-注釋", displayId: "1", preamble: null, question: "01. 雍容", options: null },
+            { section: "非選擇題-注釋", displayId: "2", preamble: null, question: "02. 赴戎機", options: null },
+            { section: "非選擇題-注釋", displayId: "3", preamble: null, question: "03. 願為「市」鞍馬", options: null },
+            { section: "非選擇題-注釋", displayId: "4", preamble: null, question: "04. 陶鑄", options: null },
+            { section: "非選擇題-注釋", displayId: "5", preamble: null, question: "05. 言必行,行必果", options: null },
+            { section: "非選擇題-注釋", displayId: "6", preamble: null, question: "06. 駭然", options: null },
+            { section: "非選擇題-翻譯填空", displayId: "1", preamble: null, question: "翻譯第1句(2分)\n原文: 昨夜見軍帖,可汗大點兵。軍書十二卷,卷卷有爺名\n翻譯: 昨天晚上看到( )知道君王正在( )。在接二連三的召集令上,每一卷都有父親的名字。", options: null },
+            { section: "非選擇題-翻譯填空", displayId: "2", preamble: null, question: "翻譯第2句(2分)\n原文: 萬里赴戎機,關山度若飛。朔氣傳金柝,寒光照鐵衣\n翻譯: 萬里長征,奔赴戰場,飛快地越過重重( ) ( ),星月的寒光照在鐵甲戰袍上。", options: null },
+            { section: "非選擇題-翻譯填空", displayId: "3", preamble: null, question: "翻譯第3句(1分)\n原文: 當窗理雲 ,對鏡貼花黃\n翻譯: 對著窗子整理( ),對著鏡子把花黃貼在額頭上", options: null },
+            { section: "非選擇題-翻譯填空", displayId: "4", preamble: null, question: "翻譯第4句(3分)\n原文: 雄兔腳撲朔, 雌兔眼迷離。兩兔傍地走,安能辨我是雄雌?\n翻譯: 雄兔( ),雌兔( ) 當兩兔( )時,又怎能分辨哪隻是雄哪隻是雌?。", options: null },
+            { section: "非選擇題-翻譯填空", displayId: "5", preamble: null, question: "翻譯第5句(2分)\n原文: 見孔明坐於城樓之上,笑容可掬,焚香操琴\n翻譯: 看見諸葛亮坐在城樓上,( ) ( )。", options: null },
+            { section: "非選擇題-加分題", displayId: "1", preamble: null, question: "人物: 花木蘭\n文本證據: (1).阿爺無大兒,木蘭無長兄。願為市鞍馬,從此替爺征。(2).可汗問所欲,「木蘭不用尚書郎,願借明駝千里足,送兒還故鄉。」\n請從文本的敘述來推論該人物的個性,並簡述原因。\n個性推論: 孝順\n推論原因: ( )", options: null },
+            { section: "非選擇題-加分題", displayId: "2", preamble: null, question: "人物: 孔明\n文本證據: 孔明登城望之,果然塵土沖天,魏兵分兩路望西城縣殺來。孔明傳令:眾將旌旗,盡皆藏匿;諸軍各守城鋪,如有妄行出入,及高聲言語者,立斬;大開四門,每一門上用二十軍士,扮作百姓,灑掃街道,如魏兵到時,不可擅動,吾自有計。\n請從文本的敘述來推論該人物的個性,並簡述原因。\n個性推論: ( )\n推論原因: ( )", options: null },
+            { section: "非選擇題-加分題", displayId: "3", preamble: null, question: "人物: 司馬懿\n文本證據: 次子司馬昭曰:「莫非諸葛亮無軍,故作此態,父親何故便退兵?」懿曰:「亮平生謹慎,不曾弄險。今大開城門,必有埋伏。我軍若進,中其計也,汝輩焉知?宜速退。」\n請從文本的敘述來推論該人物的個性,並簡述原因。\n個性推論: ( )\n推論原因: ( )", options: null },
+            { 
+                section: "綜合測驗", displayId: "1", preamble: null, 
+                question: "1.下列「」中的字,何組讀音前後相同?", 
+                options: ["(A)撲「朔」迷離/追本「溯」源", "(B)僥「倖」得名/「悻」悻然", "(C)「躡」足附耳/「懾」人心魄", "(D)「雍」容閒雅/簇「擁」"],
+                spokenOptions: ["A選項。撲某字迷離，追本某字源", "B選項。僥某字得名，某字悻然", "C選項。某字足附耳，某字人心魄", "D選項。某字容閒雅，簇某字"]
+            },
+            { section: "綜合測驗", displayId: "2", preamble: null, question: "2.下列「」中的字,何組字形前後相同?", options: ["(A)「ㄌ  」明時分/「ㄌ一」田", "(B) 「ケーㄢ」長莫及/快馬加「ケー 」", "(C)心「 」神往/鬆「彳」", "(D)依「ㄅㄤˋ」/毀「ㄅㄤˋ」"] },
+            { section: "綜合測驗", displayId: "3", preamble: null, question: "3.下列各組「」中的字義,何者相同?", options: ["(A)北「市」買長鞭/願為「市」鞍馬", "(B)朝「辭」爺娘去/再三推「辭」", "(C)「惟」聞女嘆息/「惟」有讀書高", "(D)何「故」退兵/「故」作此態"] },
+            { section: "綜合測驗", displayId: "4", preamble: null, question: "4.下列文句「」中的成語,何者使用正確?", options: ["(A)對方一開場就一路領先,打得我方「破釜沉舟」", "(B)他沉迷網路遊戲,整天「歲不我與」,荒廢學業", "(C)敵人看到我軍的壯盛軍容,立刻「所向披靡」,不戰而降", "(D)他藉著這段話「拋磚引玉」,希望與會學者能有許多精采的論見"] },
+            { section: "綜合測驗", displayId: "5", preamble: "選項 樂府詩 古體詩\n(A)句式 雜言,也有整齊的五、七言 不限,多五、七言\n(B)押韻 可換韻 一韻到底\n(C)音律 可入樂 可入樂\n(D)內容 主言情,尚溫婉 主敘事,貴道勁", question: "5. 關於「樂府詩」、「古體詩」的比較,下列何者皆正確?", options: ["(A)", "(B)", "(C)", "(D)"] },
+            { section: "綜合測驗", displayId: "6", preamble: "甲 乙 丙 丁", question: "6.請依照《木蘭詩〉的故事發展,將下列四幅圖片排出正確的順序。", options: ["(A)丙乙甲丁", "(B)甲丁乙丙", "(C)丙丁乙甲", "(D)丙乙丁甲"] },
+            { section: "綜合測驗", displayId: "7", preamble: null, question: "7.下列有關 木蘭詩〉的敘述,何者正確?", options: ["(A)「阿爺無大兒,木蘭無長兄」說明木蘭從軍的原因", "(B)「將軍百戰死,壯士十年歸」證明軍法規定十分殘酷", "(C)「朔氣傳金柝,寒光照鐵衣」形容戰爭的冷酷無情", "(D)「雄兔腳撲朔,雌兔眼迷離」指木蘭裝扮十分得體"] },
+            { section: "綜合測驗", displayId: "8", preamble: null, question: "8.「旦辭黃河去,暮至黑山頭」透過描述時間與空間的變化,表現行動的迅速之感。下列詩句,何者也運用此技巧?", options: ["(A)劍外忽傳收薊北,初聞涕淚滿衣裳", "(B)兩岸猿聲啼不盡,輕舟已過萬重山", "(C)姑蘇城外寒山寺,夜半鐘聲到客船", "(D)燕去燕來還過日,花開花落即經春"] },
+            { section: "綜合測驗", displayId: "9", preamble: null, question: "9.閱讀完《運動家的風度〉一文後,請問下列敘述何者符合其主旨?", options: ["(A)養成正大光明的人生態度", "(B)應用盡一切手段謀求最後勝利", "(C)見事態發展不佳應該立刻喊停", "(D)成功是憑藉著不斷努力和運氣"] },
+            { section: "綜合測驗", displayId: "10", preamble: null, question: "10. 請問下列選手誰最有「運動家的風度」呢?", options: ["(A)小敦發現自己無法獲勝,決定中途棄賽", "(B)大佑輸球後不想跟對手握手,逕自離場", "(C)阿德輸了比賽後,增加自己的訓練時間", "(D)白白不斷埋怨裁判不公,導致他輸比賽"] },
+            { section: "綜合測驗", displayId: "11", preamble: null, question: "11.「寧可有光明的失敗,絕不要不榮譽的成功!」此段文字主要想表達何種要旨?", options: ["(A)在勝利前卻步,最終只能擁抱失敗;在困難時堅持,往往會獲得成功", "(B)一個嘗試錯誤的人生,不但比無所事事的人生更為榮耀,並且更具意義", "(C)失敗和成功一樣重要,唯有了解失敗的原因,我們才能探知成功的方法", "(D)堂堂正正的失敗,在本質上是成功的;不清不白的成功,在本質上卻是失敗的"] },
+            { section: "綜合測驗", displayId: "12", preamble: null, question: "12.「在競選的時候,羅斯福與威爾基雖然互相批評,但是選舉揭曉以後,羅斯福收到第一個賀電,就是威爾基發的。這賀電的大意是:我們的政策,公諸國民之前,現在國民選擇你的,我竭誠地賀你成功。」此段文字主要想表達何種要旨?", options: ["(A)尊重人民選擇,表現服輸的風度", "(B)競選只是過程,結局圓滿更重要", "(C)競爭雖然激烈,但贏家只有一個", "(D)選舉是一時的,朋友卻是長久的"] },
+            { section: "綜合測驗", displayId: "13", preamble: null, question: "13.「人生何嘗不像一場競賽。跑得慢的人有些會怨天尤人,一路上窩囊委屈;有的卻抱著龜兔賽跑的精神,努力不懈直到終點。而那些跑得快的也不見得永遠領先,有的後繼無力被人超前,有的半路摔倒一蹶不起,選擇放棄。因此, 。」根據文意,畫線處填入下列何者最恰當?(109會考)", options: ["(A)人生的競賽往往是暗潮洶湧的", "(B)臺前風光是背後汗水累積而成", "(C)勝敗皆由天定,無須怨天尤人", "(D)堅持到底的人才是最後的贏家"] },
+            { section: "綜合測驗", displayId: "14", preamble: null, question: "14. 請問下列文句,何者使用了「層遞」的技巧?", options: ["(A)菊,花之隱逸者也;牡丹,花之富貴者也;蓮,花之君子者也", "(B)以叢草為林,蟲蟻為獸;以土礫凸者為丘,凹者為壑", "(C)今天的事推到明天,明天又推到後天,一天一天地推下去", "(D)富貴不能淫,貧賤不能移,威武不能屈"] },
+            { section: "綜合測驗", displayId: "15", preamble: null, question: "15. 從《空城計〉一文中,我們可以得到什麼啟示?", options: ["(A)養兵千日,才能在合適的時機使用", "(B)對敵不外乎心戰,處變不驚是原則", "(C)萬一發生戰爭,空城計是最佳選擇", "(D)最正義的軍師不應該任意欺瞞敵軍"] },
+            { section: "綜合測驗", displayId: "16", preamble: null, question: "16. 有關《空城計〉人物的行動用意,何者解讀正確?", options: ["(A)「孔明坐於城樓之上,笑容可掬,焚香操琴」:悠哉享受,勝券在握", "(B)「(司馬懿)遂止住三軍,自飛馬遠遠望之」:害怕孔明,準備撤退", "(C)「(司馬懿)教後軍作前軍,前軍作後軍」:故弄玄虛,試探敵人情況", "(D)「孔明見魏軍遠去,撫掌而笑」:計謀成功,情勢也如預料般進行"] },
+            { section: "綜合測驗", displayId: "17", preamble: null, question: "17.下列出自三國的歇後語,何者使用最正確?", options: ["(A)他對董事長拚命阿諛奉承,其企圖可謂「諸葛亮大擺空城計」,無人不曉", "(B)這場演唱會門票票價高達萬元,卻仍有許多人購買,簡直是「劉備摔阿斗」", "(C)藝術系畢業的他,竟然在金馬影帝前談論演戲技巧,真是「關公面前耍大刀」", "(D)那對夫妻為了晚餐吃什麼而大吵一架,誰也不肯退讓,只能說是「周瑜打黃蓋」"] },
+            { section: "綜合測驗", displayId: "18", preamble: null, question: "18. 楊慎 臨江仙〉:「滾滾長江東逝水,浪花淘盡英雄。是非成敗轉頭空,青山依舊在,幾度夕陽紅。」文中感嘆歷史興衰、人事已非之情,其涵義與下列何者最接近?", options: ["(A)江雨霏霏江草齊,六朝如夢島空啼", "(B)醉臥沙場君莫笑,古來征戰幾人回", "(C)取次花叢懶回顧,半緣修道半緣君", "(D) 日暮鄉關何處是?煙波江上使人愁"] },
+            { section: "綜合測驗", displayId: "19", preamble: null, question: "19.「司馬懿在魏國一直未受重用,官場起起伏伏,好不容易官拜大都督,節制百萬雄兵,焉能不知其權力非來自魏明帝,而是源自諸葛亮。諸葛亮在,魏明帝有所忌憚,必須仰賴司馬懿,諸葛亮用兵越神速,朝廷就得更倚重司馬懿。而以司馬懿的睿智韜略,熟讀史書兵法,豈能不諳『 』的道理。他清楚知道:若攻進西城活捉諸葛亮,自此世間再無敵手,那魏明帝又豈能容司馬懿鼾睡於臥榻之側?」依據此段文字,畫線處最適合填入下列何者?", options: ["(A)力勝貧,謹勝禍;慎勝害,戒勝災", "(B)知者動,仁者靜;知者樂,仁者壽", "(C)玉不琢,不成器;人不學,不知道", "(D)狡兔死,走狗烹;飛鳥盡,良弓藏"] },
+            { section: "綜合測驗", displayId: "20", preamble: null, question: "20. 爺爺七十歲生日即將到來,小明想寫張賀卡表達心意,以下是卡片中的文字:\n親愛的爺爺:\n近來好嗎?很想念您。雖然您即將邁入古稀之年,但精神奕奕、老當益壯,一點都不輸給年輕人。再過幾天,就是您福壽全歸的日子了。恭祝\n茂如松柏、壽比南山\n孫小明敬上三月三日\n文中畫線部分的詞語,何者應該加以修正?", options: ["(A)古稀之年", "(B)福壽全歸", "(C)茂如松柏", "(D)壽比南山"] },
+            { section: "綜合測驗", displayId: "21", preamble: null, question: "21.生活中時常使用到題辭,但題辭有固定適合使用的時機與用法。請問下列何者題辭使用正確?", options: ["(A)婷婷在新婚日上收到國中同學送的「鳳凰于飛」喜幛", "(B)表姊生了男寶寶,弟弟寫「弄瓦誌喜」的題辭祝賀人家", "(C)小華最近剛搬新家,鄰居乃乃送他「宜室宜家」的牌匾", "(D)這間剛開幕的餐館物美價廉,顧客「新鶯出谷」,生意很好"] },
+            { section: "綜合測驗", displayId: "22", preamble: "(A) 賀 曾西愛醫師開業誌慶 (功著杏壇) 仁心中學校長莊士岷敬賀\n(B) 許開議員當選誌慶 (坐擁百城) 平心出版社全體同仁敬贈\n(C) 王愛嬌老師惠存 (廣栽桃李) 臺中市議會議長陳清波敬賀\n(D) 惠識書局開業三十週年誌慶 (功在桑梓) 文教里里長李斯文敬賀", question: "22.下列四個題辭,何者內容正確?", options: ["(A)", "(B)", "(C)", "(D)"] },
+            { section: "綜合測驗", displayId: "23", preamble: "闔第光臨 恕邀\n謹詹於中華民國一○九年\n農曆十月廿一日(星期六)\n長男育明\n為次女巧芸舉行結婚典禮\n敬備喜宴恭請\n陳慶煌 陳林秀妹\n王昭民 孟詩雲\n鞠躬\n席設:臺北君悅酒店 (臺北市松壽路2號)", question: "23.請根據上圖喜帖的內容,判斷下列敘述何者正確?", options: ["(A)新娘是孟詩雲", "(B)新郎是王育明", "(C)發帖人是雙方家長", "(D)新娘在家中姐妹排行第三"] },
+            { section: "綜合測驗", displayId: "24", preamble: null, question: "24. 根據喜帖的內容,如果參加這場喜宴,在致贈的禮金袋上應書寫什麼題辭最適合?", options: ["(A)文定吉祥", "(B)玉潤珠圓", "(C)椿萱並茂", "(D)珠聯璧合"] },
+            { section: "綜合測驗", displayId: "25", preamble: null, question: "25.請問這份喜帖遺漏掉什麼重要訊息?", options: ["(A)宴客地點", "(B)入席時間", "(C)發帖人署名", "(D)設宴緣由"] },
+            { section: "綜合測驗", displayId: "26", preamble: "《歲月跟著》 向陽\n歲月跟著馬蹄不停地跑\n歲月跟著犁耙沉穩地耕\n歲月跟著貓爪偷偷地移\n歲月跟著永恆輪迴地繞\n滴答的秒針是蹄的聲音\n雍容的分針是犁的鋒刃\n緩慢的時針是貓的腳步\n圓柔的鐘面是生命的枷\n馳過了三月的青翠森林\n翻閱著六月的綠色大地\n躡走了九月的天光雲影\n熟透的花果在十二月凋\n馳過了兒童祭亮的眼睛\n翻閱著你我粗糙的掌紋\n躡走了老人眼角的水霧\n土底的種子正開始抽芽", question: "26. 歲月跟著〉一詩,作者以下列何者的形象貫串全詩?", options: ["(A)時鐘", "(B)植物", "(C)月曆", "(D)老人"] },
+            { section: "綜合測驗", displayId: "27", preamble: null, question: "27.關於《歲月跟著〉一詩文句的分析,下列何者不正確?", options: ["(A)「馳過了兒童粲亮的眼睛」比喻孩童對長大成人的期待", "(B)「翻閱著你我粗糙的掌紋」呈現青壯人生的艱辛奮鬥", "(C)「躡走了九月的天光雲影」比喻人生已來到晚年,充滿智慧和恬淡自如", "(D)「土底的種子正開始抽芽」比喻生命歷程終了結束,不再更替"] },
+            { section: "綜合測驗", displayId: "28", preamble: null, question: "28.關於《歲月跟著〉的寫作手法,下列敘述何者正確?", options: ["(A)使用對偶與排比手法,凸顯人生的意義價值", "(B)運用重複開頭句式,配合動詞營造節奏感", "(C)善用借代與對比技巧,呈現人生不同階段", "(D)使用諷刺與誇飾手法,增加詩歌趣味效果"] },
+            { section: "綜合測驗", displayId: "29", preamble: "【甲】\n章武①三年春,先主(劉備)於永安病篤②,召丞相亮於成都,囑以後事,謂亮曰:「君才十倍曹丕③,必能安國,終定大事。若嗣子④可輔,輔之;如其不才,君可自取。」亮涕泣曰:「臣敢竭股肱⑤之力,效忠貞之節,繼之以死!」先主又為詔敕後主(劉禪)曰:「汝與丞相從事,事之如父。」\n注釋:\n①章武:劉備稱帝時所使用的年號\n②病篤:病情沉重。篤,音ㄉㄨˇ\n③曹丕:即魏文帝,曹操的兒子,漢室權臣,逼迫漢獻帝禪位而建立曹魏\n④嗣子:承繼王位的嫡長子,此指劉禪\n⑤股肱:指用盡全力輔佐。肱,音 ㄨㄥ,胳膊\n(改寫自(三國志) 蜀書諸葛亮傳)\n【乙】\n章武三年春正月,先主召丞相亮於成都。亮省疾於永安。與尚書令李嚴並受寄託。夏四月,先主崩殂 於永安宮,時年六十三。\n注釋:\n⑥崩殂:死亡 ,音ㄘㄨˊ\n(改寫自〈華陽國志 劉先主志)", question: "29.甲文中,依諸葛亮對劉備的答覆來看,劉備說出「君才十倍曹丕,必能安國,終定大事。若嗣子可輔,輔之;如其不才,君可自取」的原因最可能為何?", options: ["(A)辨別諸葛亮是否具識人之明,可以選賢與能", "(B)考驗諸葛亮能否識時務,正確分析政治局勢", "(C)認為諸葛亮的才幹已足以安國,可自立為王", "(D)測試諸葛亮的忠心程度,確保其能竭力輔政"] },
+            { section: "綜合測驗", displayId: "30", preamble: null, question: "30.依據甲、乙二文,下列推論何者最正確?", options: ["(A)曹丕才能比不上諸葛亮,卻敢引兵犯蜀國", "(B)諸葛亮在劉備託孤前,駐守地點位於成都", "(C)劉禪在劉備臨終後,將會拜諸葛亮為義父", "(D)劉備年屆不惑之時,便在永安宮與世長辭"] }
+        ];
+
+        let currentQuestionIndex = 0;
+        let currentPreamble = '';
+        const synth = window.speechSynthesis;
+        let utterance = new SpeechSynthesisUtterance();
+        utterance.lang = 'zh-TW';
+        utterance.rate = 0.9; 
+        let voices = [];
+
+        let preambleEl = document.getElementById('preamble-text');
+        let questionEl = document.getElementById('question-text');
+        const optionsEl = document.getElementById('options-list');
+        const selectEl = document.getElementById('question-select');
+        const voiceSelectEl = document.getElementById('voice-select');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const replayBtn = document.getElementById('replay-btn');
+        const speedControl = document.getElementById('speed-control');
+        const speedValue = document.getElementById('speed-value');
+        const downloadBtn = document.getElementById('download-btn');
+
+        function populateVoiceList() {
+            voices = synth.getVoices().filter(voice => voice.lang.startsWith('zh'));
+            voiceSelectEl.innerHTML = '';
+            
+            if (voices.length === 0) {
+                const option = document.createElement('option');
+                option.textContent = '找不到中文語音';
+                voiceSelectEl.appendChild(option);
+                return;
+            }
+
+            voices.forEach((voice, i) => {
+                const option = document.createElement('option');
+                option.textContent = voice.name;
+                option.value = i;
+                voiceSelectEl.appendChild(option);
+            });
+
+            let defaultVoiceIndex = voices.findIndex(voice => voice.name.includes('Yating') && voice.lang === 'zh-TW');
+            if (defaultVoiceIndex === -1) defaultVoiceIndex = voices.findIndex(voice => voice.name === 'Google 國語（臺灣）');
+            if (defaultVoiceIndex === -1) defaultVoiceIndex = 0;
+            if (voices[defaultVoiceIndex]) {
+                utterance.voice = voices[defaultVoiceIndex];
+                voiceSelectEl.selectedIndex = defaultVoiceIndex;
+            }
+        }
+        
+        if (synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = populateVoiceList;
+        }
+
+        function speak(text) {
+            synth.cancel();
+            utterance.text = text;
+            utterance.rate = parseFloat(speedControl.value);
+            const selectedVoiceIndex = voiceSelectEl.value;
+            if (voices[selectedVoiceIndex]) utterance.voice = voices[selectedVoiceIndex];
+            synth.speak(utterance);
+        }
+
+        function speakAndHighlight(text, element) {
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            element.classList.add('speaking');
+            const cleanup = () => {
+                element.classList.remove('speaking');
+                utterance.onend = null;
+                utterance.onerror = null;
+            };
+            utterance.onend = cleanup;
+            utterance.onerror = cleanup;
+            speak(text);
+        }
+        
+        function renderPreamble(text) {
+            preambleEl.innerHTML = '';
+            if (!text) {
+                preambleEl.style.display = 'none';
+                return;
+            }
+            preambleEl.style.display = 'block';
+
+            const paragraphs = text.split('\n').filter(p => p.trim() !== '');
+            paragraphs.forEach(pText => {
+                const pElement = document.createElement('p');
+                const sentences = pText.match(/[^。？！…，,]+([。？！…，,]|…{2,})?/g) || [pText];
+                sentences.forEach(sText => {
+                    const sentenceSpan = document.createElement('span');
+                    sentenceSpan.textContent = sText;
+                    sentenceSpan.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                    pElement.appendChild(sentenceSpan);
+                });
+                preambleEl.appendChild(pElement);
+            });
+        }
+
+        function renderQuestion(index) {
+            const question = questions[index];
+            
+            let finalPreamble = question.preamble;
+            
+            if (finalPreamble !== currentPreamble) {
+                renderPreamble(finalPreamble);
+                currentPreamble = finalPreamble;
+            } else if (!finalPreamble && currentPreamble) {
+                renderPreamble(null);
+                currentPreamble = null;
+            }
+            
+            questionEl.innerHTML = '';
+            const questionText = question.question;
+            const sentences = questionText.split('\n').flatMap(line => line.match(/[^。？！…，,]+([。？！…，,]|…{2,})?/g) || [line]);
+
+             sentences.forEach((sText, i) => {
+                if (sText.trim() === '') return;
+                const sentenceSpan = document.createElement('span');
+                sentenceSpan.textContent = sText;
+                if (question.options === null) {
+                    sentenceSpan.classList.add('non-option');
+                    sentenceSpan.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                } else {
+                     sentenceSpan.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                }
+                questionEl.appendChild(sentenceSpan);
+                if (i < sentences.length -1 && question.question.includes('\n')) {
+                    questionEl.appendChild(document.createElement('br'));
+                }
+            });
+
+
+            optionsEl.innerHTML = '';
+            if (question.options && question.options.length > 0) {
+                question.options.forEach((optionText, index) => {
+                    const li = document.createElement('li');
+                    li.textContent = optionText;
+                    li.className = 'option-item';
+                    
+                    if (question.spokenOptions && question.spokenOptions[index]) {
+                        li.dataset.speak = question.spokenOptions[index];
+                    }
+
+                    li.addEventListener('click', (event) => {
+                        const textToSpeak = event.currentTarget.dataset.speak || event.currentTarget.textContent;
+                        speakAndHighlight(textToSpeak, event.currentTarget);
+                    });
+                    optionsEl.appendChild(li);
+                });
+            }
+
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === questions.length - 1;
+            selectEl.value = index;
+        }
+
+        // --- Event Listeners ---
+        prevBtn.addEventListener('click', () => {
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion(currentQuestionIndex);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion(currentQuestionIndex);
+            }
+        });
+        
+        replayBtn.addEventListener('click', () => {
+            const question = questions[currentQuestionIndex];
+            let preambleText = question.preamble || '';
+
+            const optionsText = question.spokenOptions ? question.spokenOptions.join('， ') : (question.options ? question.options.join('， ') : '');
+            const textToSpeak = `${preambleText} ${question.question}。 選項有： ${optionsText}`;
+            speak(textToSpeak);
+        });
+
+        selectEl.addEventListener('change', (e) => {
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            currentQuestionIndex = parseInt(e.target.value, 10);
+            renderQuestion(currentQuestionIndex);
+        });
+        
+        voiceSelectEl.addEventListener('change', () => {
+            const selectedVoiceIndex = voiceSelectEl.value;
+            if (voices[selectedVoiceIndex]) utterance.voice = voices[selectedVoiceIndex];
+        });
+
+        speedControl.addEventListener('input', (e) => {
+            const speed = parseFloat(e.target.value);
+            utterance.rate = speed;
+            speedValue.textContent = `${speed.toFixed(1)}x`;
+            if (synth.speaking) {
+                speak(utterance.text); // Respeak with new speed
+            }
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            const docClone = document.cloneNode(true);
+            const htmlContent = docClone.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = '報讀-逐句點選版.html';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+        });
+
+        function init() {
+            selectEl.innerHTML = '';
+            let currentSection = "";
+            let currentOptgroup = null;
+
+            questions.forEach((q, index) => {
+                if (q.section !== currentSection) {
+                    currentSection = q.section;
+                    currentOptgroup = document.createElement('optgroup');
+                    currentOptgroup.label = currentSection;
+                    selectEl.appendChild(currentOptgroup);
+                }
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = `${q.section} 第 ${q.displayId} 題`;
+                if (currentOptgroup) currentOptgroup.appendChild(option);
+            });
+
+            // Set the main title's paragraph to be empty
+            const headerParagraph = document.querySelector('header p');
+            if (headerParagraph) {
+                headerParagraph.textContent = '';
+            }
+
+            populateVoiceList(); 
+            renderQuestion(currentQuestionIndex);
+        }
+
+        init();
+    </script>
+
+</body></html>

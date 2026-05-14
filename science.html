@@ -1,0 +1,1048 @@
+<html lang="zh-TW"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg4OWY4ODcxMTZjMzU5OGVmZDZlZWU4ODA4YjhhZWYwMTIwYmFjOWYiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxMTk5MDY1NjUxNDA2ODcxODEzNSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzM1NTIzODczZDk1ODMzODhfaW5kZXguaHRtbC00NDcifSwiZXhwIjoxNzc3OTY0MzA2LCJpYXQiOjE3Nzc5NjA3MDYsImFsZyI6IlJTMjU2In0.ewNVlTiVMdtxsrePnQcPFe6LwDxit394ra0fHpqghcWbEhKiexbpJcQs8tvu0mIHxn3oMEW04mNOdDBrr4srRKA5vFL4-myncCGe0aP2OvX7J-BF1e6DjQT4IXnfLMmwy_YqSvTBBSVZQ72e-vzXVlvPGjV4kM9Np2YNQi33kzzqS21kvYTg6qQ6_i0J-sDV4bK6NTZz0-THUdE-M3rHAY2qqGbodmQGnu4DxJwFNJqBo41510bDuPNvemjXwCHFq824jLWYzwJGgnV_Ke4sGNYi7cmDejAXcaE-K73n5ikHiwNQ5SXmbd3KSSFHg2kNHP5mcmvbqA_aTYbaeMGjkQ","c_35523873d9583388_index.html-447")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){var c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){var b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){let [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;var c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){var d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function ua(a,b){return t(function*(){var d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){var d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield wa(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;let c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){var b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002","gemini-2.5-flash-image-preview","gemini-2.5-flash-image"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八年級自然科段考</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&amp;display=swap" rel="stylesheet">
+    <style>
+        /* --- 內嵌樣式以確保離線可用 --- */
+        :root {
+            /* New teal/blue-green palette */
+            --primary-100: #e0f2f1; --primary-500: #4db6ac; --primary-600: #26a69a;
+            --secondary-500: #80cbc4; --secondary-600: #4db6ac;
+            --background: #f5f7f8;
+            --surface: #ffffff;
+            --highlight-bg: #fffde7;
+            --highlight-underline: #26a69a;
+            --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-300: #cbd5e1; --gray-400: #94a3b8;
+            --gray-500: #64748b; --gray-600: #475569; --gray-700: #37474f; --gray-800: #263238; --gray-900: #1c2529;
+            --white: #ffffff;
+        }
+        body {
+            font-family: "LXGW WenKai TC", cursive;
+            background-color: var(--background);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+            margin: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+        #app-container {
+            background-color: var(--white);
+            width: 100%;
+            max-width: 56rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+        }
+        header { text-align: center; margin-bottom: 1.5rem; }
+        h1 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; color: var(--primary-600); margin-top: 0.25rem; }
+        .controls-container { margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 2rem; row-gap: 1rem; }
+        .control-group { display: flex; align-items: center; }
+        .control-label { font-size: 1.125rem; font-weight: 600; color: var(--gray-700); margin-right: 0.75rem; flex-shrink: 0; }
+        select {
+            -webkit-appearance: none; appearance: none;
+            font-size: 1.125rem; font-weight: 600; background-color: var(--gray-50); border: 1px solid var(--gray-300);
+            color: var(--gray-900); border-radius: 0.5rem; display: block; width: auto; padding: 0.625rem 2.5rem 0.625rem 0.75rem; cursor: pointer;
+            max-width: 200px;
+        }
+        select:focus { outline: 2px solid var(--primary-500); border-color: var(--primary-500); }
+        .select-wrapper { position: relative; }
+        .select-arrow { pointer-events: none; position: absolute; top: 0; bottom: 0; right: 0; display: flex; align-items: center; padding: 0 0.75rem; color: var(--gray-500); }
+        #speed-control { width: 8rem; height: 0.5rem; background-color: var(--gray-200); border-radius: 0.5rem; -webkit-appearance: none; appearance: none; cursor: pointer; }
+        #speed-control:active::-webkit-slider-thumb {
+            box-shadow: 0 0 0 8px rgba(0, 172, 193, 0.2);
+        }
+        #speed-value { margin-left: 0.75rem; font-size: 1.125rem; font-weight: 600; color: var(--gray-700); width: 3rem; text-align: left; }
+        #quiz-area { background-color: var(--surface); border: 1px solid var(--gray-200); border-radius: 0.75rem; padding: 1.5rem; min-height: 300px; }
+        #preamble-text p { line-height: 1.8; margin-bottom: 1em;}
+        .question-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; margin-top: 1.5rem;}
+        #question-text { font-size: 1.125rem; font-weight: 700; color: var(--gray-800); flex-grow: 1; white-space: pre-wrap; border-radius: 0.25rem; padding: 0.25rem; }
+        #question-text span { cursor: pointer; transition: background-color 0.2s ease; }
+        #question-text span:hover { background-color: var(--yellow-100); }
+
+        button { font-weight: 700; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); transition: all 0.2s ease-in-out; border: none;}
+        button:hover { transform: scale(1.05); }
+        button:disabled { background-color: var(--gray-300); cursor: not-allowed; transform: none; box-shadow: none; }
+        #replay-btn { background-color: var(--primary-500); color: white; padding: 0.625rem 1rem; display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+        #replay-btn:hover { background-color: var(--primary-600); }
+        #options-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+        .option-item {
+            font-size: 1rem; border: 1px solid var(--gray-300); padding: 1rem; border-radius: 0.5rem;
+            background-color: var(--white); box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+        }
+
+        /* --- Interactive Styles --- */
+        .option-item, #preamble-text span, #question-text span.non-option {
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .option-item:hover, #preamble-text span:hover, #question-text span.non-option:hover {
+            background-color: var(--highlight-bg);
+        }
+        .speaking, .speaking:hover { /* Ensure speaking style overrides hover */
+            text-decoration: underline;
+            text-decoration-color: var(--highlight-underline);
+            text-decoration-thickness: 3px;
+            background-color: var(--highlight-bg);
+        }
+
+        nav { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+        nav button { background-color: var(--primary-500); color: white; padding: 0.75rem 2rem; }
+        nav button:hover { background-color: var(--primary-600); }
+        footer { text-align: center; margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+        #download-btn { background-color: var(--gray-600); color: white; padding: 0.5rem 1.5rem; }
+        #download-btn:hover { background-color: var(--gray-700); }
+        .footer-text { font-size: 0.875rem; color: var(--gray-400); }
+
+        @media (min-width: 768px) {
+            #app-container { padding: 2.5rem; }
+            h1 { font-size: 1.875rem; line-height: 2.25rem; }
+            #question-text { font-size: 1.25rem; }
+            .option-item { font-size: 1.125rem; }
+        }
+        @media (max-width: 420px) {
+            body { padding: 0.5rem; }
+            #app-container { padding: 1rem; }
+            h1 { font-size: 1.25rem; word-break: break-word; }
+            header p { font-size: 1.125rem; }
+            .option-item { padding: 0.75rem; font-size: 1rem; }
+            nav { flex-direction: column; gap: 0.75rem; }
+            nav button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>花蓮縣立壽豐國中114學年度第二學期八年級自然領域第二次定期評量試卷</h1>
+            <p class="text-gray-500 mt-2 text-xl"></p>
+        </header>
+
+        <div class="controls-container">
+            <div class="control-group">
+                <label for="question-select" class="control-label">選擇題號:</label>
+                <div class="select-wrapper">
+                    <select id="question-select"><optgroup label="選擇題"><option value="0">選擇題 第 1 題</option><option value="1">選擇題 第 2 題</option><option value="2">選擇題 第 3 題</option><option value="3">選擇題 第 4 題</option><option value="4">選擇題 第 5 題</option><option value="5">選擇題 第 6 題</option><option value="6">選擇題 第 7 題</option><option value="7">選擇題 第 8 題</option><option value="8">選擇題 第 9 題</option><option value="9">選擇題 第 10 題</option><option value="10">選擇題 第 11 題</option><option value="11">選擇題 第 12 題</option><option value="12">選擇題 第 13 題</option><option value="13">選擇題 第 14 題</option><option value="14">選擇題 第 15 題</option><option value="15">選擇題 第 16 題</option><option value="16">選擇題 第 17 題</option><option value="17">選擇題 第 18 題</option><option value="18">選擇題 第 19 題</option><option value="19">選擇題 第 20 題</option><option value="20">選擇題 第 21 題</option><option value="21">選擇題 第 22 題</option><option value="22">選擇題 第 23 題</option><option value="23">選擇題 第 24 題</option><option value="24">選擇題 第 25 題</option></optgroup><optgroup label="素養題"><option value="25">素養題 第 26 題</option><option value="26">素養題 第 27 題</option><option value="27">素養題 第 28 題</option><option value="28">素養題 第 29 題</option><option value="29">素養題 第 30 題</option><option value="30">素養題 第 31 題</option><option value="31">素養題 第 32 題</option><option value="32">素養題 第 33 題</option><option value="33">素養題 第 34 題</option><option value="34">素養題 第 35 題</option><option value="35">素養題 第 36 題</option><option value="36">素養題 第 37 題</option><option value="37">素養題 第 38 題</option><option value="38">素養題 第 39 題</option><option value="39">素養題 第 40 題</option><option value="40">素養題 第 41 題</option><option value="41">素養題 第 42 題</option><option value="42">素養題 第 43 題</option><option value="43">素養題 第 44 題</option><option value="44">素養題 第 45 題</option><option value="45">素養題 第 46 題</option><option value="46">素養題 第 47 題</option><option value="47">素養題 第 48 題</option><option value="48">素養題 第 49 題</option><option value="49">素養題 第 50 題</option></optgroup></select>
+                    <div class="select-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708 .708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="voice-select" class="control-label">選擇聲音:</label>
+                <div class="select-wrapper">
+                    <select id="voice-select"><option value="0">Microsoft Hanhan - Chinese (Traditional, Taiwan)</option><option value="1">Microsoft Yating - Chinese (Traditional, Taiwan)</option><option value="2">Microsoft Zhiwei - Chinese (Traditional, Taiwan)</option><option value="3">Google&nbsp;普通话（中国大陆）</option><option value="4">Google&nbsp;粤語（香港）</option><option value="5">Google 國語（臺灣）</option></select>
+                    <div class="select-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708 .708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="speed-control" class="control-label">念讀速度:</label>
+                <input id="speed-control" type="range" min="0.5" max="1.5" step="0.1" value="0.9">
+                <span id="speed-value">0.9x</span>
+            </div>
+            <button id="replay-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+                </svg>
+                唸題目
+            </button>
+        </div>
+
+        <nav>
+            <button id="prev-btn">上一題</button>
+            <button id="next-btn">下一題</button>
+        </nav>
+
+        <main id="quiz-area">
+            <div id="preamble-text" class="text-base md:text-lg text-gray-700 font-medium" style="display: block;"><p><span>硫代硫酸鈉溶液和鹽酸都是透明液體，</span><span>反應後產生硫，</span><span>硫是難溶於水的黃色固體，</span><span>當產生愈來愈多的硫後，</span><span>溶液慢慢的變成混濁。</span><span>同時，</span><span>也會產生具有刺激味道的二氧化硫。</span><span>為了探討濃度對反應速率的影響，</span><span>在甲、乙、丙三個燒杯中分別裝入不同濃度的硫代硫酸鈉溶液，</span><span>再把各燒杯放在畫有「＋」的白紙上，</span><span>在室溫下，</span><span>將定量的鹽酸溶液分別倒入燒杯中，</span><span>並開始計時，</span><span>直到溶液顏色恰可遮住紙上的「＋」時才停止。</span><span>請根據下述圖與反應式回答下列問題：</span></p></div>
+            <div class="question-header">
+                <div id="question-text"><span>41.計時結束時，</span><span>甲、乙、丙三杯遮蓋「＋」字記號的沉澱物為何物質？</span></div>
+            </div>
+            <ul id="options-list"><li class="option-item">(A)硫</li><li class="option-item">(B)二氧化硫</li><li class="option-item">(C)碳</li><li class="option-item">(D)二氧化碳</li></ul>
+        </main>
+        
+        <footer>
+            <button id="download-btn">下載HTML (離線版可用)</button>
+            <p class="footer-text">© 2026 特教米克師｜採用CC BY-NC-SA 4.0 創用CC授權非商業用途歡迎轉載或改編，請保留署名並附上原始連結。</p>
+        </footer>
+    </div>
+
+    <script>
+        const questions = [
+            { section: "選擇題", displayId: "1", preamble: null, question: "1. 「凡溶於水能導電的化合物稱為電解質」，試問下列何者不是電解質？", options: ["(A)酸", "(B)鹼", "(C)鹽", "(D)糖"] },
+            { section: "選擇題", displayId: "2", preamble: null, question: "2. 下列何者為氫氧化鈣（Ca(OH)2）水溶液中陽離子總數目與陰離子總數目的比？", options: ["(A)1：1", "(B)1：2", "(C)2：1", "(D)3：1"] },
+            { section: "選擇題", displayId: "3", preamble: null, question: "3. 已知酒精(乙醇)的化學式為C2H5OH，當酒精溶於水時，有關酒精粒子狀態的示意圖，下列何者正確？", options: ["(A)", "(B)", "(C)", "(D)"] },
+            { section: "選擇題", displayId: "4", preamble: null, question: "4. 若欲檢驗白色的岩石是否含碳酸鈣的成分，加入稀鹽酸檢驗，檢驗時有什麼現象產生？", options: ["(A)有氣泡產生", "(B)顏色改變", "(C)有沉澱產生", "(D)發出刺眼強光"] },
+            { section: "選擇題", displayId: "5", preamble: "附圖為氯化氫水溶液中的離子示意圖", question: "5. 於此溶液中加入下列哪一杯氫氧化鈉水溶液，能恰好完全中和？", options: ["(A)", "(B)", "(C)", "(D)"] },
+            { section: "選擇題", displayId: "6", preamble: null, question: "6. 下列哪一種物質加入水中，可降低水溶液的pH值？", options: ["(A)鹽酸", "(B)氫氧化鈉", "(C)石灰", "(D)小蘇打"] },
+            { section: "選擇題", displayId: "7", preamble: null, question: "7. (甲)胃酸、(乙)食醋、(丙)蒸餾水、(丁)氨水。將上述四種溶液的pH值，由大而小排列，下列何者正確？", options: ["(A)乙＞丙＞丁＞甲", "(B)丁＞丙＞乙＞甲", "(C)丁＞丙＞甲＞乙", "(D)丙＞丁＞乙＞甲"] },
+            { section: "選擇題", displayId: "8", preamble: null, question: "8. 關於1個鎵原子（Ga）形成鎵離子（Ga3＋）的敘述，下列何者正確？", options: ["(A)鎵原子失去3個電子形成鎵離子", "(B)鎵原子失去3個質子形成鎵離子", "(C)鎵原子得到3個電子形成鎵離子", "(D)鎵原子得到3個質子形成鎵離子"] },
+            { section: "選擇題", displayId: "9", preamble: null, question: "9. 放一小撮食鹽(NaCl)於水中，食鹽完全溶解。有關食鹽在水中變化的敘述，下列何者正確？", options: ["(A)食鹽與水反應變成氯化氫分子散佈在水中", "(B)食鹽分解為鈉離子與氯離子散佈在水中", "(C)食鹽分解為鈉原子與氯原子散佈在水中", "(D)食鹽分解為氯化鈉分子散佈在水中"] },
+            { section: "選擇題", displayId: "10", preamble: null, question: "10.下列敘述中，鹼的共同性質何者錯誤？", options: ["(A)可導電", "(B)加入大理岩可以產生二氧化碳", "(C)可以溶解油脂", "(D)使石蕊試紙呈現藍色"] },
+            { section: "選擇題", displayId: "11", preamble: null, question: "11.常見的鹽類中，下列敘述何者錯誤?", options: ["(A)氯化鈉俗稱食鹽", "(B)碳酸鈣是石膏的主要成分", "(C)碳酸氫鈉又稱焙用鹼", "(D)碳酸鈉為鹼性"] },
+            { section: "選擇題", displayId: "12", preamble: null, question: "12.阿凱於某地收集雨水，並在25℃的環境下以不同的指示劑測雨水的酸鹼性，下列哪一種指示劑的顏色變化情形，最可能是說明「此地雨水的pH值小於5.0」的理由之一？", options: ["(A)使用甲呈現紅色", "(B)使用甲呈現藍色", "(C)使用乙呈現無色", "(D)使用乙呈現紅色"] },
+            { section: "選擇題", displayId: "13", preamble: null, question: "13.將鎂帶加入鹽酸中，會發生什麼現象?", options: ["(A)沒有反應", "(B)產生紅棕色氣體", "(C)產生氣泡，點火會熄滅", "(D)產生氣泡，點火會爆炸"] },
+            { section: "選擇題", displayId: "14", preamble: null, question: "14.溫度不變時，在廣口瓶內盛少量水，水會慢慢變成水蒸氣，下列何者為讓此反應達成平衡的最重要條件？", options: ["(A)原先水量要增加", "(B)水量需要更少", "(C)瓶口須打開", "(D)瓶口須密閉"] },
+            { section: "選擇題", displayId: "15", preamble: null, question: "15.如附圖，在定溫下，將水倒入玻璃杯內，並以玻璃片蓋住。靜置一段時間後，發現玻璃杯底部的水量減少，但到一定程度就不再變化，這是為什麼呢？", options: ["(A)水蒸發速率大於水蒸氣凝結速率", "(B)水蒸發速率小於水蒸氣凝結速率", "(C)水蒸發速率等於水蒸氣凝結速率，兩者最後達到平衡", "(D)水蒸發速率並未改變；但水蒸氣凝結速率愈來愈快"] },
+            { section: "選擇題", displayId: "16", preamble: null, question: "16.對一個已達到平衡的化學反應而言，下列敘述何者正確？", options: ["(A)正反應與逆反應均已經停止", "(B)反應物與生成物的總莫耳數相等", "(C)正反應速率大於逆反應速率", "(D)反應物與生成物的濃度維持不變"] },
+            { section: "選擇題", displayId: "17", preamble: null, question: "17.甲、乙、丙三試管中加入等體積的鹽酸溶液，但鹽酸溶液的pH值分別為2、3、5，當三個試管中加入等重鋅粉，則三支試管的反應速率關係為何？", options: ["(A)甲＞丙＞乙", "(B)甲＞乙＞丙", "(C)丙＞甲＞乙", "(D)乙＞丙＞甲"] },
+            { section: "選擇題", displayId: "18", preamble: null, question: "18.以平衡「A＋B ⇌ C＋D＋熱量」而論，下列四種方法中，何者為增加D產量的最適當方法？", options: ["(A)增加C", "(B)除去B", "(C)增加A", "(D)加熱反應系統"] },
+            { section: "選擇題", displayId: "19", preamble: null, question: "19.在古埃及文物中，法老王的金製面具經歷了數千年，至今仍然色澤鮮豔。這與黃金的哪項性質有關？", options: ["(A)延展性", "(B)導熱性、導電性", "(C)軟硬度", "(D)活性"] },
+            { section: "選擇題", displayId: "20", preamble: null, question: "20.以點燃的線香分別插入集滿空氣與氧氣的廣口瓶中進行燃燒時，發現在氧氣中線香燃燒較旺盛，在此處影響線香燃燒程度的主要因素是何者？", options: ["(A)氧氣濃度", "(B)空氣活性", "(C)線香種類", "(D)瓶子大小"] },
+            { section: "選擇題", displayId: "21", preamble: null, question: "21.老師安排的製造氧氣實驗條件是在20 ℃時，在20 mL的3 ％雙氧水中加入數粒二氧化錳。為了增加氧氣的總產量，同學們討論出幾個調整方法：(甲)溫度改變為50 ℃、(乙)雙氧水改用30 ％、(丙)將二氧化錳磨成粉狀，則哪些方法是具體可行呢？", options: ["(A)甲", "(B)乙", "(C)丙", "(D)甲乙丙均可"] },
+            { section: "選擇題", displayId: "22", preamble: null, question: "22.木材劈成細木較易被點燃，主要是受什麼因素影響？", options: ["(A)物質本性", "(B)表面積", "(C)濃度", "(D)催化劑"] },
+            { section: "選擇題", displayId: "23", preamble: null, question: "23.下列化學反應，反應速率最快的是何者？", options: ["(A)鐘乳石生成", "(B)鐵釘生鏽", "(C)食物腐敗", "(D)火藥爆炸"] },
+            { section: "選擇題", displayId: "24", preamble: null, question: "24.當大量的煤灰瀰漫在乾燥空氣的場所中，常會有爆炸的危險性，其理由與下列何種因素有關？", options: ["(A)煤灰的燃點低於30℃", "(B)煤灰是助燃劑", "(C)煤灰的顆粒小，比較容易接觸碰撞，反應速率很快", "(D)煤灰是催化劑"] },
+            { section: "選擇題", displayId: "25", preamble: null, question: "25.對於催化劑的敘述，下列何者錯誤？", options: ["(A)工業上催化劑又稱為觸媒", "(B)主要功能為改變反應速率", "(C)生物體中含有很多酶或酵素可以當作催化劑", "(D)反應結束後催化劑會轉變為新物質"] },
+            { section: "素養題", displayId: "26", preamble: "電解質溶於水，會產生帶電的粒子，稱為離子；帶正電的粒子稱為陽離子，帶負電的粒子稱為陰離子，形成離子的過程稱為解離，請回答下列問題。", question: "26.若代表鎂離子(Mg2＋)，代表氯離子(Cl－)，則下列哪一個圖示可以用來完整表示氯化鎂(MgCl2)在水中的解離情形？", options: ["(A)", "(B)", "(C)", "(D)"] },
+            { section: "素養題", displayId: "27", preamble: null, question: "27.水溶液中，陽離子總數目與陰離子的總數目比？", options: ["(A) 1：1", "(B) 2：1", "(C) 1：2", "(D) 3：1"] },
+            { section: "素養題", displayId: "28", preamble: null, question: "28.水溶液中，陽離子總電量與陰離子總電量的比為何？", options: ["(A) 1：1", "(B) 2：1", "(C) 1：2", "(D) 3：1"] },
+            { section: "素養題", displayId: "29", preamble: null, question: "29.水溶液中陽離子與陰離子的移動方向為何？才能使溶液導電。", options: ["(A)鎂離子向負極移動，氯離子向正極移動", "(B)鎂離子向正極移動，氯離子向負極移動", "(C)皆向負極移動", "(D)皆向正極移動"] },
+            { section: "素養題", displayId: "30", preamble: "隨著酸的種類不同，在水中解離產生氫離子，的程度也不同。如下圖，各取1莫耳數的兩種酸HA、HB，分別加水配成等體積的甲、乙二溶液，HA、HB解離後的示意圖如下，請回答下列問題。", question: "30.比較兩溶液的H＋濃度？", options: ["(A)甲＞乙", "(B)甲＝乙", "(C)甲＜乙", "(D)無法判定"] },
+            { section: "素養題", displayId: "31", preamble: null, question: "31.比較兩溶液酸鹼性？", options: ["(A) HA強酸，HB弱酸", "(B) HA弱酸，HB強酸", "(C) HA強鹼，HB弱鹼", "(D) HA弱鹼，HB 強鹼"] },
+            { section: "素養題", displayId: "32", preamble: null, question: "32.比較兩溶液的pH值大小？", options: ["(A)甲＜乙", "(B)甲＝乙", "(C)甲＞乙", "(D)無法判定"] },
+            { section: "素養題", displayId: "33", preamble: null, question: "33.下列何者不是甲、乙兩溶液的共同性質？", options: ["(A)都屬於酸性溶液", "(B)pH值都比7小", "(C)都能使石蕊試紙呈藍色", "(D)都有解離出氫離子"] },
+            { section: "素養題", displayId: "34", preamble: "酸與鹼混合時，發生什麼反應？………生活中有許多酸鹼中和的例子，例如：胃藥中的鹼性成分可中和分泌過量的胃酸（主要成分是鹽酸），減緩身體不適症狀。在酸鹼中和實驗過程中，若將氫氧化鈉溶液(NaOH)滴加在鹽酸水溶液(HCl)中，且以酚酞溶液作為指示劑，裝置如附圖，試回答下列問題。", question: "34.關於此反應的過程，下列何者正確？", options: ["(A)為吸熱的化學變化", "(B)為放熱的化學變化", "(C)為放熱的物理變化", "(D)為吸熱的物理變化"] },
+            { section: "素養題", displayId: "35", preamble: null, question: "35.酚酞指示劑應滴在圖中的何處？其顏色如何變化？", options: ["(A)甲處，顏色由無色變為紅色", "(B)甲處，顏色由紅色變為無色", "(C)乙處，顏色由無色變為紅色", "(D)乙處，顏色由紅色變為無色"] },
+            { section: "素養題", displayId: "36", preamble: null, question: "36.酸鹼中和時，實際參與反應的離子是下列何者？", options: ["(A) H＋與OH－", "(B) Na＋與SO42－", "(C) Na＋與OH－", "(D) H＋與SO42－"] },
+            { section: "素養題", displayId: "37", preamble: null, question: "37.甲乙在中和的過程，產生的鹽類應該是下列何者？", options: ["(A) H2O", "(B) MgCl2", "(C) NaCl", "(D) Ca(OH)2"] },
+            { section: "素養題", displayId: "38", preamble: "化學反應的反應時間也不盡相同，有些反應可以在數秒內發生，例如：煙火、爆炸；但有些卻需要數年到數百年，例如：鐘乳石形成。小美設計甲、乙、丙、丁 四組實驗的變因如附表：", question: "38.比較附表哪兩組實驗結果，可探討「溫度」對反應速率的影響？", options: ["(A)甲乙", "(B)甲丙", "(C)甲丁", "(D)丙丁"] },
+            { section: "素養題", displayId: "39", preamble: null, question: "39.承上題，溫度升高，反應速率增大，主要是反應物粒子的何項因素改變所致？", options: ["(A)顆粒變小", "(B)粒子能量減少", "(C)碰撞次數增加", "(D)表面積減少"] },
+            { section: "素養題", displayId: "40", preamble: null, question: "40.比較附表哪兩組實驗結果，可探討「濃度」對反應速率的影響？", options: ["(A)甲乙", "(B)甲丙", "(C)甲丁", "(D)丙丁"] },
+            { section: "素養題", displayId: "41", preamble: "硫代硫酸鈉溶液和鹽酸都是透明液體，反應後產生硫，硫是難溶於水的黃色固體，當產生愈來愈多的硫後，溶液慢慢的變成混濁。同時，也會產生具有刺激味道的二氧化硫。為了探討濃度對反應速率的影響，在甲、乙、丙三個燒杯中分別裝入不同濃度的硫代硫酸鈉溶液，再把各燒杯放在畫有「＋」的白紙上，在室溫下，將定量的鹽酸溶液分別倒入燒杯中，並開始計時，直到溶液顏色恰可遮住紙上的「＋」時才停止。請根據下述圖與反應式回答下列問題：", question: "41.計時結束時，甲、乙、丙三杯遮蓋「＋」字記號的沉澱物為何物質？", options: ["(A)硫", "(B)二氧化硫", "(C)碳", "(D)二氧化碳"] },
+            { section: "素養題", displayId: "42", preamble: null, question: "42.計時結束時，甲、乙、丙三杯遮蓋「＋」字記號的沉澱量大小關係為何？", options: ["(A)甲＞乙＞丙", "(B)甲＝丙＞乙", "(C)丙＞乙＞甲", "(D)甲＝乙＝丙"] },
+            { section: "素養題", displayId: "43", preamble: null, question: "43.計時結束時，甲、乙、丙三組實驗所測得時間的比較關係為何？", options: ["(A)甲＞乙＞丙", "(B)丙＞乙＞甲", "(C)甲＝乙＝丙", "(D)甲＝丙＞乙"] },
+            { section: "素養題", displayId: "44", preamble: null, question: "44.若欲增加此實驗的反應速率，還可以下列何種方式達成？", options: ["(A)加水", "(B)換更大燒杯", "(C)加二氧化錳", "(D)加熱"] },
+            { section: "素養題", displayId: "45", preamble: "當可逆反應2 K2CrO4（黃色）＋H2SO4 ⇌  K2Cr2O7（橙色）＋H2O＋K2SO4的反應達到平衡時，試回答下列問題：", question: "45.當加入硫酸(H2SO4)時，則新平衡會往什麼方向移動? 顏色會漸漸變成何種顏色?", options: ["(A)向右、漸漸變成黃色", "(B)向右、漸漸變成橙色", "(C)向左、漸漸變成黃色", "(D)向左、漸漸變成橙色"] },
+            { section: "素養題", displayId: "46", preamble: null, question: "46.當加入氫氧化鈉(NaOH)溶液時，溶液有何變化？", options: ["(A)溶液顏色沒有改變", "(B)溶液顏色漸漸變成黃色", "(C)溶液顏色漸漸變成橙色", "(D)溶液顏色漸漸變成無色"] },
+            { section: "素養題", displayId: "47", preamble: "如圖A，取相同條件的鹽酸溶液兩杯，分別放置在天平兩端，隨機在兩燒杯中同時加入等質量的碳酸鈣顆粒與粉末，探討顆粒大小對反應速率的影響，以及是否會影響最終的產物生成量。實驗過程中觀察到的結果如右圖，試回答下列問題：", question: "47.反應後會產生什麼氣體?", options: ["(A)氧氣", "(B)氫氣", "(C)二氧化碳", "(D)氮氣"] },
+            { section: "素養題", displayId: "48", preamble: null, question: "48.根據圖B結果，判斷燒杯內初始反應速率的快慢為何?", options: ["(A)甲較快", "(B)乙較快", "(C)一樣快", "(D)無法判定"] },
+            { section: "素養題", displayId: "49", preamble: null, question: "49.依圖推論，碳酸鈣粉末放置在　　　　燒杯，碳酸鈣顆粒放　　　　燒杯?", options: ["(A)甲顆粒，乙粉末", "(B)甲粉末，乙顆粒", "(C)資料不足，無法判定"] },
+            { section: "素養題", displayId: "50", preamble: null, question: "50.根據實驗結果，顆粒大小會不會影響最終的產物生成量？", options: ["(A)會", "(B)不會", "(C)資料不足，無法判定"] }
+        ];
+
+        let currentQuestionIndex = 0;
+        let currentPreamble = '';
+        const synth = window.speechSynthesis;
+        let utterance = new SpeechSynthesisUtterance();
+        utterance.lang = 'zh-TW';
+        utterance.rate = 0.9; 
+        let voices = [];
+
+        let preambleEl = document.getElementById('preamble-text');
+        let questionEl = document.getElementById('question-text');
+        const optionsEl = document.getElementById('options-list');
+        const selectEl = document.getElementById('question-select');
+        const voiceSelectEl = document.getElementById('voice-select');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const replayBtn = document.getElementById('replay-btn');
+        const speedControl = document.getElementById('speed-control');
+        const speedValue = document.getElementById('speed-value');
+        const downloadBtn = document.getElementById('download-btn');
+
+        function populateVoiceList() {
+            voices = synth.getVoices().filter(voice => voice.lang.startsWith('zh'));
+            voiceSelectEl.innerHTML = '';
+            
+            if (voices.length === 0) {
+                const option = document.createElement('option');
+                option.textContent = '找不到中文語音';
+                voiceSelectEl.appendChild(option);
+                return;
+            }
+
+            voices.forEach((voice, i) => {
+                const option = document.createElement('option');
+                option.textContent = voice.name;
+                option.value = i;
+                voiceSelectEl.appendChild(option);
+            });
+
+            let defaultVoiceIndex = voices.findIndex(voice => voice.name.includes('Yating') && voice.lang === 'zh-TW');
+            if (defaultVoiceIndex === -1) defaultVoiceIndex = voices.findIndex(voice => voice.name === 'Google 國語（臺灣）');
+            if (defaultVoiceIndex === -1) defaultVoiceIndex = 0;
+            if (voices[defaultVoiceIndex]) {
+                utterance.voice = voices[defaultVoiceIndex];
+                voiceSelectEl.selectedIndex = defaultVoiceIndex;
+            }
+        }
+        
+        if (synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = populateVoiceList;
+        }
+
+        function speak(text) {
+            synth.cancel();
+            utterance.text = text;
+            utterance.rate = parseFloat(speedControl.value);
+            const selectedVoiceIndex = voiceSelectEl.value;
+            if (voices[selectedVoiceIndex]) utterance.voice = voices[selectedVoiceIndex];
+            synth.speak(utterance);
+        }
+
+        function speakAndHighlight(text, element) {
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            element.classList.add('speaking');
+            const cleanup = () => {
+                element.classList.remove('speaking');
+                utterance.onend = null;
+                utterance.onerror = null;
+            };
+            utterance.onend = cleanup;
+            utterance.onerror = cleanup;
+            speak(text);
+        }
+        
+        function renderPreamble(text) {
+            preambleEl.innerHTML = '';
+            if (!text) {
+                preambleEl.style.display = 'none';
+                return;
+            }
+            preambleEl.style.display = 'block';
+
+            const paragraphs = text.split('\n').filter(p => p.trim() !== '');
+            paragraphs.forEach(pText => {
+                const pElement = document.createElement('p');
+                const sentences = pText.match(/[^。？！…，,]+([。？！…，,]|…{2,})?/g) || [pText];
+                sentences.forEach(sText => {
+                    const sentenceSpan = document.createElement('span');
+                    sentenceSpan.textContent = sText;
+                    sentenceSpan.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                    pElement.appendChild(sentenceSpan);
+                });
+                preambleEl.appendChild(pElement);
+            });
+        }
+
+        function renderQuestion(index) {
+            const question = questions[index];
+            
+            let finalPreamble = question.preamble;
+            
+            if (finalPreamble !== currentPreamble) {
+                renderPreamble(finalPreamble);
+                currentPreamble = finalPreamble;
+            } else if (!finalPreamble && currentPreamble) {
+                renderPreamble(null);
+                currentPreamble = null;
+            }
+            
+            questionEl.innerHTML = '';
+            const questionText = question.question;
+            const sentences = questionText.split('\n').flatMap(line => line.match(/[^。？！…，,]+([。？！…，,]|…{2,})?/g) || [line]);
+
+             sentences.forEach((sText, i) => {
+                if (sText.trim() === '') return;
+                const sentenceSpan = document.createElement('span');
+                sentenceSpan.textContent = sText;
+                if (question.options === null) {
+                    sentenceSpan.classList.add('non-option');
+                    sentenceSpan.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                } else {
+                     sentenceSpan.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                }
+                questionEl.appendChild(sentenceSpan);
+                if (i < sentences.length -1 && question.question.includes('\n')) {
+                    questionEl.appendChild(document.createElement('br'));
+                }
+            });
+
+
+            optionsEl.innerHTML = '';
+            if (question.options && question.options.length > 0) {
+                question.options.forEach(optionText => {
+                    const li = document.createElement('li');
+                    li.textContent = optionText;
+                    li.className = 'option-item';
+                    li.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                    optionsEl.appendChild(li);
+                });
+            }
+
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === questions.length - 1;
+            selectEl.value = index;
+        }
+
+        // --- Event Listeners ---
+        prevBtn.addEventListener('click', () => {
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion(currentQuestionIndex);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion(currentQuestionIndex);
+            }
+        });
+        
+        replayBtn.addEventListener('click', () => {
+            const question = questions[currentQuestionIndex];
+            let preambleText = question.preamble || '';
+
+            const optionsText = question.options ? question.options.join(', ') : '';
+            const textToSpeak = `${preambleText} ${question.question}。 選項有： ${optionsText}`;
+            speak(textToSpeak);
+        });
+
+        selectEl.addEventListener('change', (e) => {
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            currentQuestionIndex = parseInt(e.target.value, 10);
+            renderQuestion(currentQuestionIndex);
+        });
+        
+        voiceSelectEl.addEventListener('change', () => {
+            const selectedVoiceIndex = voiceSelectEl.value;
+            if (voices[selectedVoiceIndex]) utterance.voice = voices[selectedVoiceIndex];
+        });
+
+        speedControl.addEventListener('input', (e) => {
+            const speed = parseFloat(e.target.value);
+            utterance.rate = speed;
+            speedValue.textContent = `${speed.toFixed(1)}x`;
+            if (synth.speaking) {
+                speak(utterance.text); // Respeak with new speed
+            }
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            const docClone = document.cloneNode(true);
+            const htmlContent = docClone.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = '報讀-逐句點選版.html';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+        });
+
+        function init() {
+            selectEl.innerHTML = '';
+            let currentSection = "";
+            let currentOptgroup = null;
+
+            questions.forEach((q, index) => {
+                if (q.section !== currentSection) {
+                    currentSection = q.section;
+                    currentOptgroup = document.createElement('optgroup');
+                    currentOptgroup.label = currentSection;
+                    selectEl.appendChild(currentOptgroup);
+                }
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = `${q.section} 第 ${q.displayId} 題`;
+                if (currentOptgroup) currentOptgroup.appendChild(option);
+            });
+
+            // Set the main title's paragraph to be empty
+            const headerParagraph = document.querySelector('header p');
+            if (headerParagraph) {
+                headerParagraph.textContent = '';
+            }
+
+            populateVoiceList(); 
+            renderQuestion(currentQuestionIndex);
+        }
+
+        init();
+    </script>
+
+</body></html>
