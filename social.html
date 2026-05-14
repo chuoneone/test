@@ -1,0 +1,1044 @@
+<html lang="zh-TW"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg4NWQ3NDljYzY2NDljMDMxOWY1YmJlYWYwMWU4ZmVjZDIyZjk1YzQiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxMTk5MDY1NjUxNDA2ODcxODEzNSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzU1NjVkZjk1M2U5ZGM0MjNfaW5kZXguaHRtbC04NTIifSwiZXhwIjoxNzc4NzI0NjUzLCJpYXQiOjE3Nzg3MjEwNTMsImFsZyI6IlJTMjU2In0.mziSMIDcrOcpE5i8oP9pzH6RavKxhrBP7eIR6qr2IuaulEpyw1yJrsN-1xbqZdbESAOfGv5i5kh8tHPR7Hpdb6dZFG5XUmzHv7oiFSJoQRfO_rbhBueDm_n1EIWDH7jPNLGho9t00cttqoCIyqAlNUk1ZGOXAj6JPHIYwF3wrv4cQufkODteviyMI3e2vv4JzpJpvxmHryllRRY109KoOQMVJJtvi2ir0CRIZxbVNi1kPaqX6jMGSDUDFxBnntq4lZkQO9Pa8XR7_PGlzqtjANeUwwQXF3Z7PcW4S1NB1UfvW0_ipUJ9DclEvEYlwJraAHBCYaCSRsohnGiVyty7oA","c_5565df953e9dc423_index.html-852")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){var c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){var b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){let [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;var c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){var d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function ua(a,b){return t(function*(){var d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){var d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield wa(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;let c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){var b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花蓮縣立壽豐國中114學年第二學期第二次段考八年級社會科試題</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&amp;display=swap" rel="stylesheet">
+    <style>
+        /* --- 內嵌樣式以確保離線可用 --- */
+        :root {
+            /* New teal/blue-green palette */
+            --primary-100: #e0f2f1; --primary-500: #4db6ac; --primary-600: #26a69a;
+            --secondary-500: #80cbc4; --secondary-600: #4db6ac;
+            --background: #f5f7f8;
+            --surface: #ffffff;
+            --highlight-bg: #fffde7;
+            --highlight-underline: #26a69a;
+            --gray-100: #f1f5f9; --gray-200: #e2e8f0; --gray-300: #cbd5e1; --gray-400: #94a3b8;
+            --gray-500: #64748b; --gray-600: #475569; --gray-700: #37474f; --gray-800: #263238; --gray-900: #1c2529;
+            --white: #ffffff;
+        }
+        body {
+            font-family: "LXGW WenKai TC", cursive;
+            background-color: var(--background);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+            margin: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+        #app-container {
+            background-color: var(--white);
+            width: 100%;
+            max-width: 56rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+        }
+        header { text-align: center; margin-bottom: 1.5rem; }
+        h1 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; color: var(--primary-600); margin-top: 0.25rem; }
+        .controls-container { margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: 2rem; row-gap: 1rem; }
+        .control-group { display: flex; align-items: center; }
+        .control-label { font-size: 1.125rem; font-weight: 600; color: var(--gray-700); margin-right: 0.75rem; flex-shrink: 0; }
+        select {
+            -webkit-appearance: none; appearance: none;
+            font-size: 1.125rem; font-weight: 600; background-color: var(--gray-50); border: 1px solid var(--gray-300);
+            color: var(--gray-900); border-radius: 0.5rem; display: block; width: auto; padding: 0.625rem 2.5rem 0.625rem 0.75rem; cursor: pointer;
+            max-width: 200px;
+        }
+        select:focus { outline: 2px solid var(--primary-500); border-color: var(--primary-500); }
+        .select-wrapper { position: relative; }
+        .select-arrow { pointer-events: none; position: absolute; top: 0; bottom: 0; right: 0; display: flex; align-items: center; padding: 0 0.75rem; color: var(--gray-500); }
+        #speed-control { width: 8rem; height: 0.5rem; background-color: var(--gray-200); border-radius: 0.5rem; -webkit-appearance: none; appearance: none; cursor: pointer; }
+        #speed-control:active::-webkit-slider-thumb {
+            box-shadow: 0 0 0 8px rgba(0, 172, 193, 0.2);
+        }
+        #speed-value { margin-left: 0.75rem; font-size: 1.125rem; font-weight: 600; color: var(--gray-700); width: 3rem; text-align: left; }
+        #quiz-area { background-color: var(--surface); border: 1px solid var(--gray-200); border-radius: 0.75rem; padding: 1.5rem; min-height: 300px; }
+        #preamble-text p { line-height: 1.8; margin-bottom: 1em;}
+        .question-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; margin-top: 1.5rem;}
+        #question-text { font-size: 1.125rem; font-weight: 700; color: var(--gray-800); flex-grow: 1; white-space: pre-wrap; border-radius: 0.25rem; padding: 0.25rem; }
+        #question-text span { cursor: pointer; transition: background-color 0.2s ease; }
+        #question-text span:hover { background-color: var(--yellow-100); }
+
+        button { font-weight: 700; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); transition: all 0.2s ease-in-out; border: none;}
+        button:hover { transform: scale(1.05); }
+        button:disabled { background-color: var(--gray-300); cursor: not-allowed; transform: none; box-shadow: none; }
+        #replay-btn { background-color: var(--primary-500); color: white; padding: 0.625rem 1rem; display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+        #replay-btn:hover { background-color: var(--primary-600); }
+        #options-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+        .option-item {
+            font-size: 1rem; border: 1px solid var(--gray-300); padding: 1rem; border-radius: 0.5rem;
+            background-color: var(--white); box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+        }
+
+        /* --- Interactive Styles --- */
+        .option-item, #preamble-text span, #question-text span.non-option {
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .option-item:hover, #preamble-text span:hover, #question-text span.non-option:hover {
+            background-color: var(--highlight-bg);
+        }
+        .speaking, .speaking:hover { /* Ensure speaking style overrides hover */
+            text-decoration: underline;
+            text-decoration-color: var(--highlight-underline);
+            text-decoration-thickness: 3px;
+            background-color: var(--highlight-bg);
+        }
+
+        nav { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+        nav button { background-color: var(--primary-500); color: white; padding: 0.75rem 2rem; }
+        nav button:hover { background-color: var(--primary-600); }
+        footer { text-align: center; margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+        #download-btn { background-color: var(--gray-600); color: white; padding: 0.5rem 1.5rem; }
+        #download-btn:hover { background-color: var(--gray-700); }
+        .footer-text { font-size: 0.875rem; color: var(--gray-400); }
+
+        @media (min-width: 768px) {
+            #app-container { padding: 2.5rem; }
+            h1 { font-size: 1.875rem; line-height: 2.25rem; }
+            #question-text { font-size: 1.25rem; }
+            .option-item { font-size: 1.125rem; }
+        }
+        @media (max-width: 420px) {
+            body { padding: 0.5rem; }
+            #app-container { padding: 1rem; }
+            h1 { font-size: 1.25rem; word-break: break-word; }
+            header p { font-size: 1.125rem; }
+            .option-item { padding: 0.75rem; font-size: 1rem; }
+            nav { flex-direction: column; gap: 0.75rem; }
+            nav button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>花蓮縣立壽豐國中114學年第二學期第二次段考八年級社會科試題</h1>
+            <p class="text-gray-500 mt-2 text-xl"></p>
+        </header>
+
+        <div class="controls-container">
+            <div class="control-group">
+                <label for="question-select" class="control-label">選擇題號:</label>
+                <div class="select-wrapper">
+                    <select id="question-select"><optgroup label="選擇題"><option value="0">選擇題 第 1 題</option><option value="1">選擇題 第 2 題</option><option value="2">選擇題 第 3 題</option><option value="3">選擇題 第 4 題</option><option value="4">選擇題 第 5 題</option><option value="5">選擇題 第 6 題</option><option value="6">選擇題 第 7 題</option><option value="7">選擇題 第 8 題</option><option value="8">選擇題 第 9 題</option><option value="9">選擇題 第 10 題</option><option value="10">選擇題 第 11 題</option><option value="11">選擇題 第 12 題</option><option value="12">選擇題 第 13 題</option><option value="13">選擇題 第 14 題</option><option value="14">選擇題 第 15 題</option><option value="15">選擇題 第 16 題</option><option value="16">選擇題 第 17 題</option><option value="17">選擇題 第 18 題</option><option value="18">選擇題 第 19 題</option><option value="19">選擇題 第 20 題</option><option value="20">選擇題 第 21 題</option><option value="21">選擇題 第 22 題</option><option value="22">選擇題 第 23 題</option><option value="23">選擇題 第 24 題</option><option value="24">選擇題 第 25 題</option><option value="25">選擇題 第 26 題</option><option value="26">選擇題 第 27 題</option><option value="27">選擇題 第 28 題</option><option value="28">選擇題 第 29 題</option><option value="29">選擇題 第 30 題</option><option value="30">選擇題 第 31 題</option><option value="31">選擇題 第 32 題</option><option value="32">選擇題 第 33 題</option><option value="33">選擇題 第 34 題</option></optgroup><optgroup label="題組"><option value="34">題組 第 35 題</option><option value="35">題組 第 36 題</option></optgroup><optgroup label="非選題"><option value="36">非選題 第 一 題</option><option value="37">非選題 第 二 題</option></optgroup><optgroup label="加分題"><option value="38">加分題 第 一 題</option></optgroup></select>
+                    <div class="select-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708 .708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="voice-select" class="control-label">選擇聲音:</label>
+                <div class="select-wrapper">
+                    <select id="voice-select"><option value="0">Microsoft Hanhan - Chinese (Traditional, Taiwan)</option><option value="1">Microsoft Yating - Chinese (Traditional, Taiwan)</option><option value="2">Microsoft Zhiwei - Chinese (Traditional, Taiwan)</option><option value="3">Google&nbsp;普通话（中国大陆）</option><option value="4">Google&nbsp;粤語（香港）</option><option value="5">Google 國語（臺灣）</option></select>
+                    <div class="select-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708 .708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="speed-control" class="control-label">念讀速度:</label>
+                <input id="speed-control" type="range" min="0.5" max="1.5" step="0.1" value="0.9">
+                <span id="speed-value">0.9x</span>
+            </div>
+            <button id="replay-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+                </svg>
+                唸題目
+            </button>
+        </div>
+
+        <nav>
+            <button id="prev-btn">上一題</button>
+            <button id="next-btn">下一題</button>
+        </nav>
+
+        <main id="quiz-area">
+            <div id="preamble-text" class="text-base md:text-lg text-gray-700 font-medium" style="display: block;"><p><span> 大功告成</span></p><p><span>陪都昨日熱烈慶祝</span></p><p><span>昨日重慶陽光燦爛，</span><span>為舉行慶祝大會，</span><span>政府機關、軍隊和民眾早就做了充分的準備，</span><span>會場上懸掛著中、美、英、蘇四國領袖的巨幅畫像，</span><span>象徵同盟國的勝利。</span><span>會場上空繫著氣球，</span><span>上書『世界和平』等字樣，</span><span>市民都歡欣鼓舞的抬頭仰望。</span></p></div>
+            <div class="question-header">
+                <div id="question-text"><span>27. 附圖是某報紙報導的部分內容,</span><span>標題中的「?」最適合填入下列何者?</span></div>
+            </div>
+            <ul id="options-list"><li class="option-item">(A)辛亥革命</li><li class="option-item">(B)八年抗戰</li><li class="option-item">(C)北伐統一</li><li class="option-item">(D)抗美援朝。</li></ul>
+        </main>
+        
+        <footer>
+            <button id="download-btn">下載HTML (離線版可用)</button>
+            <p class="footer-text">© 2025 特教米克師｜採用CC BY-NC-SA 4.0 創用CC授權非商業用途歡迎轉載或改編，請保留署名並附上原始連結。</p>
+        </footer>
+    </div>
+
+    <script>
+        const questions = [
+            { section: "選擇題", displayId: "1", preamble: "念\n朝\n五功\n課\nS", question: "1. 附圖是某種宗教信徒每天必須做的功課。由圖中內容可知,該宗教應為下列何者?", options: ["(A)印度教", "(B)佛教", "(C)基督教", "(D)伊斯蘭教"] },
+            { section: "選擇題", displayId: "2", preamble: null, question: "2. 西亞與北非屬於不同的大洲,但兩者的乾燥氣候面積都相當廣大,這與下列哪一項因素的關係最為密切?", options: ["(A)距海遙遠", "(B)位於西風背風側", "(C)涼流經過", "(D)副熱帶高氣壓籠罩。"] },
+            { section: "選擇題", displayId: "3", preamble: null, question: "3. 點圖在地圖上通常可以呈現特色主題分布的疏密狀況,例如:人口。在西亞的人口分布點圖中,以下列哪一個地區的人口分布密度最高?", options: ["(A)伊朗高原", "(B)美索不達米亞平原", "(C)阿拉伯高原", "(D)安納托力亞高原。"] },
+            { section: "選擇題", displayId: "4", preamble: null, question: "4. 「這是耶穌傳教、犧牲、復活的聖城;這是穆罕默德登天聆聽真主阿拉祝福和啟示的地方;這是古代猶太王國的首都。這裡多次為了爭奪三大宗教聖地而發生戰爭。」由上文內容判斷,此地應為哪個城市?", options: ["(A)麥加", "(B)耶路撒冷", "(C)杜拜", "(D)伊斯坦堡。"] },
+            { section: "選擇題", displayId: "5", preamble: "28.20\n比水 \n68mm\n25.9C\n降水量\n2793mm\n123456789101112\n年均 \n26.1\n150\n-10\n150\n123456789101112\n畫\n2069mm\n耳均\n10.70\n年同水量\n807mm\n400\n123456789101112", question: "5. 棗椰樹屬於棕櫚科植物,主要分布在西亞與北非,其果實稱為椰棗,既可作糧食又是製糖的原料,是該地區重要的出口農產品。由其分布特徵推論。棗椰樹適合生長的條件可以用下列哪一幅氣候圖呈現?", options: ["(A)", "(B)", "(C)", "(D)"] },
+            { section: "選擇題", displayId: "6", preamble: "WORLD\nTRADE\nORGANIZATION\n(A)\n(B)\nAPEC\n(C)\n(D)", question: "6. 化石能源為目前地球上主要的動力來源,由於下列哪一個國際組織對於該礦物的價格及供需狀況影響力甚大,因此最具重要性?", options: ["(A)", "(B)", "(C)", "(D)"] },
+            { section: "選擇題", displayId: "7", preamble: null, question: "7. 在某本以近現代中國為背景的小說中寫到:「最近,國家開始實施新政策,由政府指定中央、交通、中國這幾家銀行發行法幣。我想,此政策若真能好好實行,改善過去幣制混亂的情況,買賣交易就比較好做了。」這段話所呈現的最可能是中國處於下列何種局勢下的情況?", options: ["(A)戊戌變法期間,朝廷推動經濟改革", "(B)八國聯軍結束,朝廷陸續推行新政", "(C)北伐統一完成,政府致力建設發展", "(D)八年抗戰後期,政府籌措資金抗日"] },
+            { section: "選擇題", displayId: "8", preamble: null, question: "8. 民國建立後,孫中山革命屢次受挫,在一次動亂事件後他與廣州的軍閥陳炯明決裂,於是他決心尋求外援幫助。民國13年,孫中山終於盼來期待已久的武器與經費,此外國勢力協助其打造軍校,但也要求國民黨必須與共產黨合作。當時是哪個外國勢力援助孫中山的革命活動並與其合作?", options: ["(A)蘇聯", "(B)日本", "(C)美國", "(D)英國。"] },
+            { section: "選擇題", displayId: "9", preamble: null, question: "9. 「關於我的『政治主張』,因為和蔣委員長在意見上的衝突,已經沒有和解的跡象。我考慮了三種方法來解決此事,第一是辭職、第二是勸諫、第三是兵諫。第一個方法因為我的國難家仇,和東北軍部下們的反對而不可行。最近我試了第二個方法,但導致蔣委員長極端憤怒。因此我決定採取第三個方法,以武力拘禁蔣委員長。」上述「政治主張」最可能為下列何者?", options: ["(A)立即停止內戰,聯合各黨派抗日", "(B)反對洪憲帝制,起兵討伐袁世凱", "(C)終結軍閥混戰,完成中國的統一", "(D)攘外必先安內,全力剿滅共產黨。"] },
+            { section: "選擇題", displayId: "10", preamble: null, question: "10. 「某國在十九世紀末設置一個機構,最初是顧及戰後返國的軍人,身上可能帶有病菌,因而先送往此處進行消毒及隔離,後來也在此處收容戰爭俘虜。在該國曾參與的甲午戰爭、第一次世界大戰、九一八事變,乃至於太平洋戰爭,此機構都曾發揮隔離檢疫的功能。」上述「某國」最可能是下列何者?", options: ["(A)日本", "(B)德國", "(C)美國", "(D)法國。"] },
+            { section: "選擇題", displayId: "11", preamble: null, question: "11. 抗日戰爭勝利後,國民政府依據《建國大綱》著手推進憲政的實施。中華民國結束訓政時期,正式進入憲政時期是在下列何時?", options: ["(A)民國35年", "(B)民國36年", "(C)民國37年", "(D)民國38年。"] },
+            { section: "選擇題", displayId: "12", preamble: null, question: "12. 小花看到一段歷史資料:「1940年代蔣經國在上海打老虎,打擊炒作物資,哄抬物價的投機分子,但最後整件事情不了了之,這個結果證明國民黨的徇私與無能,全民嘩然,民心倒向共產黨。」上述歷史資料最可能在描述國共關係中的哪個階段?", options: ["(A)聯俄容共到國共決裂", "(B)國共決裂到西安事變", "(C)西安事變到八年抗戰", "(D)抗戰結束到國民政府遷臺。"] },
+            { section: "選擇題", displayId: "13", preamble: "小城:舅舅,過年期間大家都聚在一起打麻將,這樣沒有觸犯賭博罪嗎?\n舅舅:根據刑法規定,賭博罪是在公共場所或公眾得出入的場所,以賭博方式取得財物的行為住家屬於私人領域空間,不屬於公共場所,因此逢年過節走訪親友家打家庭麻將,原則上不構成犯罪。\n小城:所以在家打麻將都沒事囉?\n舅舅:那可不一定,同樣在住家打麻將,如果長期讓多數人、不特定人隨意進出,與公共空間相似,就可能構成賭博罪。", question: "13. 根據對話可知,相同行為會因行為場所的差異而有不同結果,與下列何種原則的關係最密切?", options: ["(A)誠實信用", "(B)罪刑法定", "(C)契約自由", "(D)消滅時效。"] },
+            { section: "選擇題", displayId: "14", preamble: null, question: "14. 開庭時,基於司法權審判公正,允許當事人以外之民眾,自由到法院旁聽。孝真未來希望從事司法相關工作,今天她利用課餘時間去刑事法庭旁聽。下列何種處罰不會出現在此判決中?", options: ["(A)褫奪公權4年", "(B)損害賠償金6,000元", "(C)罰金6,000元", "(D)拘役10天。"] },
+            { section: "選擇題", displayId: "15", preamble: null, question: "15. 21歲的小花擔任詐騙車手,假冒檢察官身分詐騙婦人80多萬元遭逮。法官審酌小花患有先天性智能障礙,有學習力差、智能偏低之情形,因此酌量減輕其刑,判犯詐欺取財罪,處有期徒刑6個月。上述案例中法官減輕小花刑期的原因最有可能為何?", options: ["(A)行為時未獲取不法所得", "(B)行為並非出於故意", "(C)年紀太小,心智尚未發育成熟", "(D)心智缺陷,導致辨識違法的能力明顯減低。"] },
+            { section: "選擇題", displayId: "16", preamble: null, question: "16. 國中生小安寄了一封陳情信給某位公職人員,信中敘述父親因長期施用及購買毒品,導致家中積蓄耗盡,不僅身體健康每況愈下,更常對家人施加暴力,家庭幾近破碎。小安希望有人能揪出賣毒品給父親的藥頭,救救他的家庭。該名公職人員收到信後,立刻指揮司法警察啟動偵辦,循線破獲了當地的販毒集團,蒐集相關證據後,正式依法對毒販提起公訴。根據上述內容判斷,小安寄信的對象應是下列何者?", options: ["(A)法官", "(B)律師", "(C)檢察官", "(D)警察局局長。"] },
+            { section: "選擇題", displayId: "17", preamble: null, question: "17. 由於網路資訊科技及人工智慧技術的運用快速發展,以電腦合成或其他科技方法製作關於他人不實的性影像,真假難辨且易於流傳,因此對被害人造成難堪與恐懼等身心創傷。為了規範性影像使用的規定,《刑法》增訂第28章之1「妨害性隱私及不實性影像罪章」,並於2023年2月10日施行。下列關於此修法的概念,何者說明正確?", options: ["(A)有明文規定出犯罪行為", "(B)增加倫理道德的約束力", "(C)能罰修法前的相關行為", "(D)此法為行政院增訂通過。"] },
+            { section: "選擇題", displayId: "18", preamble: "事件一\n辰揚騎腳踏車時逆向闖紅燈,被交通警察攔下並開罰單。\n事件二\n小宥在國道上因變換車道未打方向燈而與他人發生擦撞,他一氣之下,拿球棒毆打對方,對方因此受傷並報警處理。", question: "18. 下列為兩起事件的發生經過,依據我國的法律規定,兩位當事人的行為須負擔何種法律責任?", options: ["(A)辰揚與小宥的行為皆觸犯《刑法》,都屬於犯罪行為", "(B)辰揚的行為只有違法並無犯罪,無須負刑事責任", "(C)只要違反法律,就一定會被判刑,不論行為類型", "(D)小宥的行為只有犯罪並無違法,只須負刑事責任。"] },
+            { section: "選擇題", displayId: "19", preamble: null, question: "19. 臺灣每次缺水,農田就開始停灌休耕,然而遠在西亞的以色列,他們沒有向嚴苛的環境低頭,放棄農耕、消極休耕,反而研發了滴灌技術,使以色列出口農產品到鄰近區域,所以歐洲人說:以色列是歐洲的冬季廚房。冬天是以色列豐收的季節,主要原因與下列哪種氣候類型有關?", options: ["(A)熱帶沙漠氣候", "(B)溫帶海洋性氣候", "(C)熱帶季風氣候", "(D)溫帶地中海型氣候。"] },
+            { section: "選擇題", displayId: "20", preamble: "Qibla: 245\n麥加\n聞\n*\nN\nm", question: "20. 住在南韓首爾的宋小喬,想要利用穆斯林應用軟體的指北針指出麥加的方向來朝拜,應用軟體上最可能顯示什麼方位?", options: ["(A)西北方", "(B)東南方", "(C)西南方", "(D)東北方。"] },
+            { section: "選擇題", displayId: "21", preamble: "代號 日期 經度 緯度 地震規模 死亡人數\n甲 2003/05/21 4 E 36 N 6.8 2,266\n乙 2003/12/26 58°E 29 N 6.6 34,000\n丙 2023/02/06 37°E 37 N 7.8 59,259\nT 2023/09/08 8 W 31 N 6.8 2,946\n30W\ntow\n大\n30 N\n23.6\n20\n▲西亞與北亞近年重大地震分布圖\n印度洋", question: "21. 附表為西亞與北非近年來發生的重大地震,根據表中資訊判斷,哪一地震災害最可能發生於伊朗境內?", options: ["(A) 甲", "(B)乙", "(C)丙", "(D)丁"] },
+            { section: "選擇題", displayId: "22", preamble: "1917年 1948年\n2000年\n迄今\n●巴勒斯坦  以色列", question: "22. 「伊朗支持的葉門青年運動發言人說,青年運動會持續對以色列發動攻擊,『直到加薩走廊受圍困的情況解除為止』。以聲援加薩走廊的巴勒斯坦人民為由,繼續向以國發射飛彈。」小晴看到這樣的報導就去研究該區的衝突問題,她可以從附圖中推論出以巴砲火連連,與下列何者關係最為密切?", options: ["(A)領土衝突", "(B)水資源衝突", "(C)運河使用權", "(D)爭奪石油資源。"] },
+            { section: "選擇題", displayId: "23", preamble: null, question: "23. 以下是一位旅行者在上海的見聞:「上海的工廠地帶可以看到轟炸的痕跡,有來到了戰場的感覺。但是如果來到租界區,興盛的商業中心立即映入眼中。在此,歐、美國家的主要銀行林立,國民政府的官方銀行——中央銀行,以及中國銀行、交通銀行等仍然繁忙地繼續營業,處理租界區內法幣的發行與交易。」此人最可能是在下列何時參訪上海?", options: ["(A)1830年代", "(B)1890年代", "(C)1930年代", "(D)1990年代"] },
+            { section: "選擇題", displayId: "24", preamble: null, question: "24. 以下是中國天津某年慶祝元旦的相關報導:「政府要求各機關及各民眾團體,在元旦上午參加慶祝中華民國成立的紀念大會。當晚民眾提燈遍遊街市,高呼 勿忘國恥』、『抵制日貨』、『打倒貪官汙吏』、『打倒燒香化紙、磕頭拜年的惡習』等口號。各街市商號張貼標語、懸燈結綵,國民黨黨旗和國旗飄揚天際,蔚為盛況。」上述內容最可能是描繪下列何時的景象?", options: ["(A)1861~1895年自強運動期間", "(B)1928~1937年十年建設期間", "(C)1958~1961年農工大躍進期間", "(D)1966~1976年文化大革命期間。"] },
+            { section: "選擇題", displayId: "25", preamble: "王道光明照耀大地\n滿洲建國以後\n日八十月九起想\n很 \n三日本兵對我們", question: "25. 附圖是一幅宣傳海報,此宣傳海報最早可能在下列何時何地傳布?", options: ["(A)1919~1930年的臺北", "(B)1949~1960年的臺北", "(C)1916~1928年的瀋陽", "(D)1932~1945年的瀋陽。"] },
+            { section: "選擇題", displayId: "26", preamble: null, question: "26. 「某年,美國空軍飛臨敵區臺灣進行偵查空照,並於年底開始對臺灣各地的市街、車站、糖廠進行轟炸,臺灣西部縱貫公路與鐵路受創嚴重。」上述情況的發生,與下列何者關係最密切?", options: ["(A)盧溝橋事變", "(B)韓戰", "(C)珍珠港事件", "(D)美國與中華民國斷交。"] },
+            { section: "選擇題", displayId: "27", preamble: "？ 大功告成\n陪都昨日熱烈慶祝\n昨日重慶陽光燦爛，為舉行慶祝大會，政府機關、軍隊和民眾早就做了充分的準備，會場上懸掛著中、美、英、蘇四國領袖的巨幅畫像，象徵同盟國的勝利。會場上空繫著氣球，上書『世界和平』等字樣，市民都歡欣鼓舞的抬頭仰望。", question: "27. 附圖是某報紙報導的部分內容,標題中的「?」最適合填入下列何者?", options: ["(A)辛亥革命", "(B)八年抗戰", "(C)北伐統一", "(D)抗美援朝。"] },
+            { section: "選擇題", displayId: "28", preamble: null, question: "28. 國民政府宣布全國「動員戡亂」的時代背景為何?", options: ["(A)北伐時期實施清黨後開始剿共行動", "(B)九一八事變後「攘外必先安內」政策", "(C)國共戰爆發,限制《憲法》,提高總統權力", "(D)七七事變發生後,中共宣布共赴國難。"] },
+            { section: "選擇題", displayId: "29", preamble: null, question: "29. 廣治無意間涉入一起珠寶竊案而遭檢察官約談,雖然案件仍在調查階段,但因媒體的報導,使廣治飽受朋友及路人異樣眼光,他不平地認為社會上的法治素養實在有待加強。上述廣治指的法治素養最可能是下列何者?", options: ["(A)人民不分貧富貴賤,犯罪就要依法處罰", "(B)告訴乃論之罪,司法人員不得主動追究", "(C)法律未明定處罰的行為,不得任意處罰", "(D)未經法官判決有罪確定前,應視為無罪。"] },
+            { section: "選擇題", displayId: "30", preamble: "每日報\n老翁倒車不慎撞死鄰居小孩\n18歲國中輟學生 毆打同學成傷", question: "30. 附圖是每日報的新聞版面,這二則新聞內容中的事件具有某一項共同點。根據圖中內容判斷,下列何者應是上述所指的共同點?", options: ["(A)皆僅能由被害人告發案件", "(B)皆適用《少年事件處理法》", "(C)二案皆可經由調解程序解決", "(D)加害人皆可能負起刑事責任。"] },
+            { section: "選擇題", displayId: "31", preamble: "法官\n辯護律師\n書記官\n被告", question: "31. 水源國中的校外教學到地方法院參觀,並讓甲、乙、丙、丁四位同學在模擬法庭中扮演不同的角色,如附圖所示。根據我國法律規定及圖中情境判斷,下列關於他們四人的臺詞,何者最適當?", options: ["(A)甲:我依據相關犯罪事證依法起訴", "(B)乙:我承認錯誤,我會儘早償還借款", "(C)丙:我希望甲審酌證據後判決乙無罪", "(D)丁:我判決原告勝訴,撤銷行政處分。"] },
+            { section: "選擇題", displayId: "32", preamble: "一名受刑人託友人於媒體投書,建議政府調整監獄中的課程及勞動的相關規定,我深有同感,認為應具體規畫符合現今社會需求的職能課程,訓練受刑人習得一技之長,以防未來出獄後無力謀生,被迫重操舊業,再度犯案。", question: "32. 以下是閔琪在社群媒體上的發文,根據內容判斷,當中提及的刑罰目的應與下列何者呈現的概念最相近?", options: ["(A)剝奪受刑人的基本權利,對犯罪行為給予嚴厲處罰", "(B)改善獄中的福利與待遇,協助受刑人盡速縮短刑期", "(C)藉由隔離受刑人與社會,達到預防犯罪的威嚇效果", "(D)透過矯正及教化過程,讓受刑人有改過向善的機會。"] },
+            { section: "選擇題", displayId: "33", preamble: null, question: "33. 下列資料為《漢摩拉比法典》中部分條文的內容,根據我國的法律類別判斷,何者相當於現行《刑法》的範圍?", options: ["(A)自由民娶妻時未訂契約,則此婦女非其妻子", "(B)若自由民無法以銀償還債務,只能以穀物來償還,債權人必須接受", "(C)自由民竊取神廟或王宮財物者應被處死,而收受贓物者亦應被處死", "(D)若父親生前未承認與奴隸所生子女,則奴隸子女不得與配偶之子同分家產。"] },
+            { section: "選擇題", displayId: "34", preamble: "時間 類型 2020年 2021年\n民事事件 200 230\n刑事案件 180 150\n法律諮詢服務總數 380 380\n單位:件", question: "34. 某民意代表在服務處設立法律諮詢服務站,附表是2020年及2021年法律諮詢服務件數的統計資料,在2020年的刑事案件中,超過半數屬於告訴乃論,而2021年則有過半數的刑事案件屬於非告訴乃論。根據上述內容判斷,在2020年及2021年的諮詢服務中,可採調解方式處理的件數可能為下列何者?", options: ["(A)2020年70件,2021年100件", "(B)2020年100件,2021年70件", "(C)2020年300件,2021年300件", "(D)2020年330件,2021年330件。"] },
+            { section: "題組", displayId: "35", preamble: "杜拜因石油的開採與輸出,成為西亞最富有的地區之一。由於經濟飛速的發展,對能源的需求日益增大。然而,地下蘊藏的石油並非取之不盡用之不竭,因此自1970年代起,杜拜即進行多元化的建設與發展,包含觀光業、金融業、國際貿易轉運站,以吸引來自全球的資金、勞工與觀光客。\n杜拜全年陽光普照,海灘優美、海水湛藍。但原始的海岸線不足以容納更多的觀光客,為了延長海岸線,杜拜花費數百億修建人工島。島上建造奢華的度假勝地和購物中心,並以風景如畫的白色沙灘和一年四季的陽光吸引各國的投資者與富豪。\n然而人工島的填海與挖土工程令當地水質混濁,形成的懸浮物沉積在珊瑚礁和底棲生物身上,嚴重影響當地生態。完工後的人造設施阻擋波浪,破壞人工島東側沙灘的沉積作用,進而發生嚴重的海岸侵蝕現象,顯示出杜拜繁榮發展的背後,潛藏著環境永續的隱憂。\n(參考資料:改寫自綠色和平 Greenpeace,問題島途:從全球大型填海工程看明日大嶼計畫的危機,2023/02/16)\n\n(A)\n(B)\n波斯灣\n地中海\n阿曼灣\n(C)\n(D)\n黑海\n印度洋。", question: "35. 杜拜因位於下列哪個位置,而成為西亞的貿易轉運站?", options: ["(A)波斯灣", "(B)地中海", "(C)黑海", "(D)印度洋。"] },
+            { section: "題組", displayId: "36", preamble: null, question: "36. 促使杜拜自1970年代起即進行多元化的建設與發展的主要原因為何?", options: ["(A)降低對單一礦產資源的依賴", "(B)勞力成本提升,促使產業升級", "(C)國家基礎建設不足,經濟發展受限", "(D)國內族群複雜多元,社會動盪不安。"] },
+            { section: "非選題", displayId: "一", preamble: null, question: "三、非選題(共10分)\n(一)請填入正確的代號。\n20W 10W\n10 20 30 40 50 60 70\n3076\n255 N\n20N\n10 N\n(1)土耳其:【 】\n(2)沙烏地阿拉伯:【 】\n(3)伊拉克:【 】\n(4)地中海:【 】\n(5)波斯灣:【 】", options: null },
+            { section: "非選題", displayId: "二", preamble: null, question: "(二)請將下列事件填入空格中:\n珍珠港事變;西安事變;九一八事變;\n七七事變;五四運動\n1. 日本藉此事件控制中國東北:\n2. 中日全面開戰:\n3. 學生發起抗議巴黎和會:\n4. 美國藉此參與二次大戰:\n5. 張學良逼迫蔣中正轉向抗日:", options: null },
+            { section: "加分題", displayId: "一", preamble: null, question: "四、加分題(共5分)\n根據敘述,判斷以下人物的責任能力,並將對應代號填入。\n甲、無責任能力人乙、限制責任能力人丙、完全責任能力人\n人物 責任能力\n(1)小光從出生就失去說話能力,也聽不到聲音,今年剛滿18歲。\n(2)阿泉今年滿19歲,即將進入大學就讀\n(3)萱萱的爺爺去年過80歲大壽,大家都替他高興。\n(4)冠鈞今年是13歲的國一新生\n(5)丞熙的妹妹今年10歲,就讀國小四年級", options: null }
+        ];
+
+        let currentQuestionIndex = 0;
+        let currentPreamble = '';
+        const synth = window.speechSynthesis;
+        let utterance = new SpeechSynthesisUtterance();
+        utterance.lang = 'zh-TW';
+        utterance.rate = 0.9; 
+        let voices = [];
+
+        let preambleEl = document.getElementById('preamble-text');
+        let questionEl = document.getElementById('question-text');
+        const optionsEl = document.getElementById('options-list');
+        const selectEl = document.getElementById('question-select');
+        const voiceSelectEl = document.getElementById('voice-select');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const replayBtn = document.getElementById('replay-btn');
+        const speedControl = document.getElementById('speed-control');
+        const speedValue = document.getElementById('speed-value');
+        const downloadBtn = document.getElementById('download-btn');
+
+        function populateVoiceList() {
+            voices = synth.getVoices().filter(voice => voice.lang.startsWith('zh'));
+            voiceSelectEl.innerHTML = '';
+            
+            if (voices.length === 0) {
+                const option = document.createElement('option');
+                option.textContent = '找不到中文語音';
+                voiceSelectEl.appendChild(option);
+                return;
+            }
+
+            voices.forEach((voice, i) => {
+                const option = document.createElement('option');
+                option.textContent = voice.name;
+                option.value = i;
+                voiceSelectEl.appendChild(option);
+            });
+
+            let defaultVoiceIndex = voices.findIndex(voice => voice.name.includes('Yating') && voice.lang === 'zh-TW');
+            if (defaultVoiceIndex === -1) defaultVoiceIndex = voices.findIndex(voice => voice.name === 'Google 國語（臺灣）');
+            if (defaultVoiceIndex === -1) defaultVoiceIndex = 0;
+            if (voices[defaultVoiceIndex]) {
+                utterance.voice = voices[defaultVoiceIndex];
+                voiceSelectEl.selectedIndex = defaultVoiceIndex;
+            }
+        }
+        
+        if (synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = populateVoiceList;
+        }
+
+        function speak(text) {
+            synth.cancel();
+            utterance.text = text;
+            utterance.rate = parseFloat(speedControl.value);
+            const selectedVoiceIndex = voiceSelectEl.value;
+            if (voices[selectedVoiceIndex]) utterance.voice = voices[selectedVoiceIndex];
+            synth.speak(utterance);
+        }
+
+        function speakAndHighlight(text, element) {
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            element.classList.add('speaking');
+            const cleanup = () => {
+                element.classList.remove('speaking');
+                utterance.onend = null;
+                utterance.onerror = null;
+            };
+            utterance.onend = cleanup;
+            utterance.onerror = cleanup;
+            speak(text);
+        }
+        
+        function renderPreamble(text) {
+            preambleEl.innerHTML = '';
+            if (!text) {
+                preambleEl.style.display = 'none';
+                return;
+            }
+            preambleEl.style.display = 'block';
+
+            const paragraphs = text.split('\n').filter(p => p.trim() !== '');
+            paragraphs.forEach(pText => {
+                const pElement = document.createElement('p');
+                const sentences = pText.match(/[^。？！…，,]+([。？！…，,]|…{2,})?/g) || [pText];
+                sentences.forEach(sText => {
+                    const sentenceSpan = document.createElement('span');
+                    sentenceSpan.textContent = sText;
+                    sentenceSpan.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                    pElement.appendChild(sentenceSpan);
+                });
+                preambleEl.appendChild(pElement);
+            });
+        }
+
+        function renderQuestion(index) {
+            const question = questions[index];
+            
+            let finalPreamble = question.preamble;
+            
+            if (finalPreamble !== currentPreamble) {
+                renderPreamble(finalPreamble);
+                currentPreamble = finalPreamble;
+            } else if (!finalPreamble && currentPreamble) {
+                renderPreamble(null);
+                currentPreamble = null;
+            }
+            
+            questionEl.innerHTML = '';
+            const questionText = question.question;
+            const sentences = questionText.split('\n').flatMap(line => line.match(/[^。？！…，,]+([。？！…，,]|…{2,})?/g) || [line]);
+
+             sentences.forEach((sText, i) => {
+                if (sText.trim() === '') return;
+                const sentenceSpan = document.createElement('span');
+                sentenceSpan.textContent = sText;
+                if (question.options === null) {
+                    sentenceSpan.classList.add('non-option');
+                    sentenceSpan.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                } else {
+                     sentenceSpan.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                }
+                questionEl.appendChild(sentenceSpan);
+                if (i < sentences.length -1 && question.question.includes('\n')) {
+                    questionEl.appendChild(document.createElement('br'));
+                }
+            });
+
+
+            optionsEl.innerHTML = '';
+            if (question.options && question.options.length > 0) {
+                question.options.forEach(optionText => {
+                    const li = document.createElement('li');
+                    li.textContent = optionText;
+                    li.className = 'option-item';
+                    li.addEventListener('click', (event) => {
+                        speakAndHighlight(event.currentTarget.textContent, event.currentTarget);
+                    });
+                    optionsEl.appendChild(li);
+                });
+            }
+
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === questions.length - 1;
+            selectEl.value = index;
+        }
+
+        // --- Event Listeners ---
+        prevBtn.addEventListener('click', () => {
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion(currentQuestionIndex);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion(currentQuestionIndex);
+            }
+        });
+        
+        replayBtn.addEventListener('click', () => {
+            const question = questions[currentQuestionIndex];
+            let preambleText = question.preamble || '';
+
+            const optionsText = question.options ? question.options.join(', ') : '';
+            const textToSpeak = `${preambleText} ${question.question}。 選項有： ${optionsText}`;
+            speak(textToSpeak);
+        });
+
+        selectEl.addEventListener('change', (e) => {
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            currentQuestionIndex = parseInt(e.target.value, 10);
+            renderQuestion(currentQuestionIndex);
+        });
+        
+        voiceSelectEl.addEventListener('change', () => {
+            const selectedVoiceIndex = voiceSelectEl.value;
+            if (voices[selectedVoiceIndex]) utterance.voice = voices[selectedVoiceIndex];
+        });
+
+        speedControl.addEventListener('input', (e) => {
+            const speed = parseFloat(e.target.value);
+            utterance.rate = speed;
+            speedValue.textContent = `${speed.toFixed(1)}x`;
+            if (synth.speaking) {
+                speak(utterance.text); // Respeak with new speed
+            }
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            const docClone = document.cloneNode(true);
+            const htmlContent = docClone.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = '報讀-逐句點選版.html';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+        });
+
+        function init() {
+            selectEl.innerHTML = '';
+            let currentSection = "";
+            let currentOptgroup = null;
+
+            questions.forEach((q, index) => {
+                if (q.section !== currentSection) {
+                    currentSection = q.section;
+                    currentOptgroup = document.createElement('optgroup');
+                    currentOptgroup.label = currentSection;
+                    selectEl.appendChild(currentOptgroup);
+                }
+                const option = document.createElement('option');
+                option.value = index;
+                const prefix = q.displayId === "無" ? "" : `第 ${q.displayId} 題`;
+                option.textContent = `${q.section} ${prefix}`.trim();
+                if (currentOptgroup) currentOptgroup.appendChild(option);
+            });
+
+            // Set the main title's paragraph to be empty
+            const headerParagraph = document.querySelector('header p');
+            if (headerParagraph) {
+                headerParagraph.textContent = '';
+            }
+
+            populateVoiceList(); 
+            renderQuestion(currentQuestionIndex);
+        }
+
+        init();
+    </script>
+
+</body></html>
